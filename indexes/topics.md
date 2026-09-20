@@ -1,5 +1,5 @@
 # Topics Index
-Auto-generated 2026-09-20. 28 knowledge areas, 38 notes.
+Auto-generated 2026-09-20. 28 knowledge areas, 40 notes.
 
 Start here to find domain knowledge. Each area folder holds dated, confidence-labeled notes.
 
@@ -26,7 +26,7 @@ Start here to find domain knowledge. Each area folder holds dated, confidence-la
 - **performance** (1 notes) — `knowledge/performance/`
 - **prompt-engineering** (1 notes) — `knowledge/prompt-engineering/`
 - **reasoning** (1 notes) — `knowledge/reasoning/`
-- **research** (1 notes) — `knowledge/research/`
+- **research** (3 notes) — `knowledge/research/`
 - **security** (3 notes) — `knowledge/security/`
 - **seo** (1 notes) — `knowledge/seo/`
 - **testing** (2 notes) — `knowledge/testing/`
