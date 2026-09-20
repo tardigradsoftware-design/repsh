@@ -1,0 +1,36 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "nest"
+owner: "nestjs"
+url: "https://github.com/nestjs/nest"
+description: "A progressive Node.js framework for building efficient, scalable, and enterprise-grade server-side applications with TypeScript/JavaScript 🚀"
+category: backend
+language: "TypeScript"
+license: "MIT"
+stars: 76694
+forks: 8558
+open_issues: 32
+stars_checked_at: 2026-09-20
+last_push: 2026-09-20
+created_at: 2017-02-04
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: high
+relevance: high
+confidence: VERY HIGH
+recommended_for:
+  - "structured Node backends"
+  - "enterprise TS servers"
+not_recommended_for:
+  - "small scripts"
+related_projects:
+  - "expressjs/express"
+source_verified: true
+notes: "Opinionated, modular Node framework for structured services."
+tags:
+  - "nodejs"
+  - "api"
+  - "architecture"

@@ -1,0 +1,37 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "DeepSeek-R1"
+owner: "deepseek-ai"
+url: "https://github.com/deepseek-ai/DeepSeek-R1"
+description: ""
+category: research
+language: null
+license: "MIT"
+stars: 91984
+forks: 11684
+open_issues: 35
+stars_checked_at: 2026-09-20
+last_push: 2025-06-27
+created_at: 2025-01-20
+status: STABLE
+official: true
+production_ready: yes
+maintenance_status: none
+security_status: good
+documentation_quality: excellent
+community_adoption: high
+relevance: core
+confidence: MEDIUM
+recommended_for:
+  - "open reasoning model research"
+  - "RL-trained reasoning reproduction"
+  - "distillation study"
+not_recommended_for:
+  - "latest capability claims (repo pushed 2025-06 at verification)"
+related_projects:
+  - "huggingface/open-r1"
+source_verified: true
+notes: "Open-weight reasoning model with published technique (RL with verifiable rewards, distillation). The canonical public reasoning-research artifact. NOTE: model evolves on Hugging Face; this repo is the paper/weights pointer."
+tags:
+  - "reasoning"
+  - "open-models"
+  - "rl"

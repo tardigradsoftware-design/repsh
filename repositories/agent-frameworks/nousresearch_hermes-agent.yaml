@@ -1,0 +1,39 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "hermes-agent"
+owner: "NousResearch"
+url: "https://github.com/NousResearch/hermes-agent"
+description: "The agent that grows with you"
+category: agent-frameworks
+language: "Python"
+license: "MIT"
+stars: 247254
+forks: 51965
+open_issues: 43460
+stars_checked_at: 2026-09-20
+last_push: 2026-09-20
+created_at: 2025-07-22
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: massive
+relevance: high
+confidence: VERY HIGH
+recommended_for:
+  - "self-improving agent architectures"
+  - "skill synthesis from experience"
+  - "long-horizon personal agents"
+not_recommended_for:
+  - "unreviewed autonomous execution on private data"
+related_projects:
+  - "obra/superpowers"
+  - "openai/openai-agents-python"
+source_verified: true
+notes: "Nous Research's open agent that grows with the user: learns skills from its own experience and persists memory. The key public reference for procedural-skill synthesis (see knowledge/agent-engineering/agent-memory.md). Massive adoption at verification (247k+ stars) — treat architecture claims as PRIMARY-source verified, capability claims as vendor-stated."
+tags:
+  - "agent-framework"
+  - "memory"
+  - "self-improvement"
+  - "skills"

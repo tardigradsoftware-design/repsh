@@ -1,0 +1,28 @@
+name: slack-mcp
+repository: https://github.com/modelcontextprotocol/servers
+npm_package: null
+pypi_package: null
+official: false
+maintainer: community (multiple implementations exist; verify before use)
+purpose: "Slack workspace access: channel history, message posting — common human-in-the-loop notification channel for agents."
+tools: [list_channels, get_history, post_message]
+resources: [channel-history]
+authentication: Slack bot token (xoxb) with granular scopes
+permissions:
+  filesystem: none
+  network: restricted
+  credentials: scoped
+  database: none
+  code_execution: false
+  external_side_effects: true
+security_risk: medium
+data_exfiltration_risk: high
+prompt_injection_surface: high
+tool_poisoning_risk: low
+local_or_remote: local
+setup_complexity: low
+production_readiness: conditional
+license: CUSTOM/NOASSERTION
+last_verified: 2026-09-20
+notes: "Message posting = external side effects; restrict to designated bot channels. Incoming Slack content is untrusted input (injection surface). Community servers vary in quality — audit before adoption."
+tags: [mcp, communication, notifications]

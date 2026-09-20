@@ -1,0 +1,28 @@
+name: fetch-mcp
+repository: https://github.com/modelcontextprotocol/servers
+npm_package: "@modelcontextprotocol/server-fetch"  # note: python variant server-fetch in same repo
+pypi_package: mcp-server-fetch
+official: true
+maintainer: MCP org (reference server)
+purpose: "Fetch URLs and return content as markdown for LLM consumption; robots.txt aware; the base web-reading primitive."
+tools: [fetch]
+resources: [url-content]
+authentication: none
+permissions:
+  filesystem: none
+  network: full
+  credentials: none
+  database: none
+  code_execution: false
+  external_side_effects: false
+security_risk: medium
+data_exfiltration_risk: high
+prompt_injection_surface: high
+tool_poisoning_risk: low
+local_or_remote: local
+setup_complexity: trivial
+production_readiness: yes
+license: CUSTOM/NOASSERTION
+last_verified: 2026-09-20
+notes: "Any URL-content tool is an exfil + injection channel: agents can be told (by page content) to fetch attacker URLs carrying secrets. Mitigate with domain allowlists in agent policy. See knowledge/security/prompt-injection.md."
+tags: [mcp, web, research]

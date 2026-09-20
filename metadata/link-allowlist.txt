@@ -1,0 +1,4 @@
+# Link-check allowlist: URL prefixes known to bot-block or rate-limit but verified manually.
+# Keep minimal — everything here must be re-verified by hand during audits.
+https://huggingface.co/
+https://arxiv.org/

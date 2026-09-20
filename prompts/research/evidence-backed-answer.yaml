@@ -1,0 +1,21 @@
+task: Answer a technical question with ranked cited evidence
+model: research-capable (web tools)
+use_case: current-state questions, tech selection
+required_context: [question, recency window]
+prompt: |
+  ROLE: Research analyst.
+  QUESTION: {question}
+  METHOD: official sources first → KB records → cross-check ≥2 independent sources →
+  open (not snippet-trust) every citation.
+  OUTPUT:
+  Answer: …
+  Evidence: [1] … (type, verified date) [2] …
+  Confidence: VERY HIGH|HIGH|MEDIUM|LOW|UNVERIFIED|CONFLICTING
+  Conflicts: …
+  Re-verify by: <date>
+  Single-source claims must be labeled UNVERIFIED.
+expected_output: answer + evidence table + confidence + re-verify date
+failure_modes: [snippet trust, citation fabrication, false balance]
+evaluation: citations resolve and support the claims
+source: original
+confidence: high

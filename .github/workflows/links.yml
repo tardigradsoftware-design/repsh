@@ -1,0 +1,43 @@
+name: Link Freshness (weekly)
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"  # Mondays 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: External link check (retry + transient tolerance)
+        run: python3 scripts/update/links.py
+        # 404s fail the job; transient network/5xx after retries become warnings.
+        # Allowlist: metadata/link-allowlist.txt
+
+  github-metadata:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refresh GitHub metadata snapshot
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p metadata/raw
+          > metadata/raw/github-$(date +%F).jsonl
+          # extract repo slugs from current records
+          grep -rhoP '(?<=url: ")https://github.com/[^"]+' repositories/ | sed 's|https://github.com/||; s|/$||' | sort -u | while read -r slug; do
+            gh api "repos/$slug" --jq '{name,full_name,description,html_url,stargazers_count,forks_count,open_issues_count,archived,pushed_at,created_at,license:.license.spdx_id,language,topics}' >> "metadata/raw/github-$(date +%F).jsonl" || echo "::warning::fetch failed: $slug"
+          done
+          python3 scripts/update/repositories.py
+      - name: Open PR if records changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: refresh GitHub metadata snapshot"
+          title: "Weekly GitHub metadata refresh"
+          body: "Automated star/status/archival refresh from the GitHub API. Review status transitions (esp. ARCHIVED/MAINTENANCE) before merging."
+          branch: "automation/metadata-refresh"

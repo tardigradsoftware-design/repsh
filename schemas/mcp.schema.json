@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mcp.schema.json",
+  "title": "MCP Server Record",
+  "description": "Model Context Protocol server registry entry with security assessment.",
+  "type": "object",
+  "required": ["name", "repository", "purpose", "official", "security_risk", "last_verified"],
+  "properties": {
+    "name": { "type": "string" },
+    "repository": { "type": "string", "format": "uri" },
+    "npm_package": { "type": ["string", "null"] },
+    "pypi_package": { "type": ["string", "null"] },
+    "official": { "type": "boolean" },
+    "maintainer": { "type": "string" },
+    "purpose": { "type": "string" },
+    "tools": { "type": "array", "items": { "type": "string" } },
+    "resources": { "type": "array", "items": { "type": "string" } },
+    "authentication": { "type": "string" },
+    "permissions": {
+      "type": "object",
+      "properties": {
+        "filesystem": { "enum": ["none", "read", "write", "read-write"] },
+        "network": { "enum": ["none", "restricted", "full"] },
+        "credentials": { "enum": ["none", "scoped", "broad"] },
+        "database": { "enum": ["none", "read", "write", "read-write", "admin"] },
+        "code_execution": { "type": "boolean" },
+        "external_side_effects": { "type": "boolean" }
+      }
+    },
+    "security_risk": { "enum": ["low", "medium", "high", "critical"] },
+    "data_exfiltration_risk": { "enum": ["low", "medium", "high"] },
+    "prompt_injection_surface": { "enum": ["low", "medium", "high"] },
+    "tool_poisoning_risk": { "enum": ["low", "medium", "high"] },
+    "local_or_remote": { "enum": ["local", "remote", "both"] },
+    "setup_complexity": { "enum": ["trivial", "low", "medium", "high"] },
+    "production_readiness": { "enum": ["yes", "no", "conditional", "unknown"] },
+    "license": { "type": ["string", "null"] },
+    "last_verified": { "type": "string", "format": "date" },
+    "notes": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } }
+  }
+}

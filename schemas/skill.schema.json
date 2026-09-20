@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "skill.schema.json",
+  "title": "Skill",
+  "description": "A validated, reusable capability module for AI agents.",
+  "type": "object",
+  "required": ["name", "version", "description", "category", "status", "confidence", "source_type", "updated"],
+  "properties": {
+    "name": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "description": { "type": "string", "maxLength": 300 },
+    "category": { "type": "string" },
+    "status": { "enum": ["active", "experimental", "deprecated", "draft"] },
+    "confidence": { "enum": ["very-high", "high", "medium", "low", "unverified", "conflicting"] },
+    "source_type": { "enum": ["original", "reference", "hybrid"] },
+    "updated": { "type": "string", "format": "date" },
+    "verified_at": { "type": "string", "format": "date" },
+    "expires_at": { "type": "string", "format": "date" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "requires": { "type": "array", "items": { "type": "string" } },
+    "quality": {
+      "type": "object",
+      "properties": {
+        "authority": { "type": "number", "minimum": 0, "maximum": 10 },
+        "evidence": { "type": "number", "minimum": 0, "maximum": 10 },
+        "recency": { "type": "number", "minimum": 0, "maximum": 10 },
+        "adoption": { "type": "number", "minimum": 0, "maximum": 10 },
+        "reproducibility": { "type": "number", "minimum": 0, "maximum": 10 },
+        "practical_value": { "type": "number", "minimum": 0, "maximum": 10 },
+        "maintenance": { "type": "number", "minimum": 0, "maximum": 10 }
+      }
+    },
+    "tier": { "enum": ["S", "A", "B", "C", "Experimental", "Deprecated", "Unverified"] },
+    "content_type": { "enum": ["FACT", "RECOMMENDATION", "EXPERIMENT", "OPINION", "HYPOTHESIS", "UNKNOWN"] }
+  }
+}

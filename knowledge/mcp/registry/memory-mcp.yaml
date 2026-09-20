@@ -1,0 +1,28 @@
+name: memory-mcp
+repository: https://github.com/modelcontextprotocol/servers
+npm_package: "@modelcontextprotocol/server-memory"
+pypi_package: null
+official: true
+maintainer: MCP org (reference server)
+purpose: "Persistent knowledge-graph memory (entities, relations, observations) over a local file — reference implementation for agent long-term memory."
+tools: [create_entities, create_relations, add_observations, search_nodes, read_graph]
+resources: [knowledge-graph]
+authentication: none (local file)
+permissions:
+  filesystem: read-write
+  network: none
+  credentials: none
+  database: none
+  code_execution: false
+  external_side_effects: false
+security_risk: low
+data_exfiltration_risk: low
+prompt_injection_surface: low
+tool_poisoning_risk: medium
+local_or_remote: local
+setup_complexity: trivial
+production_readiness: conditional
+license: CUSTOM/NOASSERTION
+last_verified: 2026-09-20
+notes: "Memory poisoning is the real risk: false 'observations' persist and bias future sessions. Treat memory writes as untrusted until reviewed; see knowledge/agent-engineering/agent-memory.md."
+tags: [mcp, memory, knowledge-graph]

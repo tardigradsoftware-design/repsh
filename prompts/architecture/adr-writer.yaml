@@ -1,0 +1,14 @@
+task: Write an Architecture Decision Record
+model: any
+use_case: any significant technical choice
+required_context: [decision context, options considered]
+prompt: |
+  OUTPUT ADR: Title · Status · Context (forces + constraints) · Decision (one sentence) ·
+  Consequences (positive/negative) · Alternatives rejected (each with reason) · Revisit-by date.
+  Rules: verify current versions of anything version-dependent (date them); boring-technology
+  default — novelty needs explicit justification.
+expected_output: complete ADR
+failure_modes: [missing rejected-alternatives, undated version claims]
+evaluation: a newcomer can reconstruct WHY without asking
+source: original
+confidence: high

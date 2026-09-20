@@ -1,0 +1,38 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "SWE-bench"
+owner: "SWE-bench"
+url: "https://github.com/SWE-bench/SWE-bench"
+description: "SWE-bench: Can Language Models Resolve Real-world Github Issues?"
+category: evaluation
+language: "Python"
+license: "MIT"
+stars: 5874
+forks: 974
+open_issues: 16
+stars_checked_at: 2026-09-20
+last_push: 2026-09-18
+created_at: 2023-10-04
+status: ACTIVE
+official: true
+production_ready: conditional
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: moderate
+relevance: core
+confidence: VERY HIGH
+recommended_for:
+  - "coding-agent capability measurement"
+  - "real GitHub issue resolution"
+not_recommended_for:
+  - "production hiring decisions"
+  - "contaminated leaderboard chasing"
+related_projects:
+  - "THUDM/AgentBench"
+  - "ServiceNow/BrowserGym"
+source_verified: true
+notes: "The canonical software-engineering benchmark for LLMs/agents: resolve real repo issues with tests. SWE-bench Verified subset reduces grading noise."
+tags:
+  - "benchmark"
+  - "coding-agents"
+  - "swe"

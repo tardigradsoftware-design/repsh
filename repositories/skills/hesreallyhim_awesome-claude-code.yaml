@@ -1,0 +1,36 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "awesome-claude-code"
+owner: "hesreallyhim"
+url: "https://github.com/hesreallyhim/awesome-claude-code"
+description: "A hand-picked collection of the finest of resources for the most awesome of agents, Claude Code, the undisputed champion of coding companions, from the unstoppable team at Anthropic PBC. A delectable showcase of top tier skills, ambidextrous agents, scintillating status lines, top notch developer tooling, and also we have plugins"
+category: skills
+language: "Python"
+license: "CUSTOM/NOASSERTION"
+stars: 54332
+forks: 4736
+open_issues: 1087
+stars_checked_at: 2026-09-20
+last_push: 2026-09-20
+created_at: 2025-04-19
+status: ACTIVE
+official: false
+production_ready: yes
+maintenance_status: active
+security_status: acceptable
+documentation_quality: good
+community_adoption: high
+relevance: high
+confidence: HIGH
+recommended_for:
+  - "resource discovery"
+  - "tooling discovery"
+not_recommended_for:
+  - "blind ingestion of listed resources"
+related_projects:
+  - "VoltAgent/awesome-agent-skills"
+source_verified: true
+notes: "Large discovery layer (skills, agents, status lines, tooling, plugins). Non-standard license at verification. Every listed resource must be re-verified before inclusion here."
+tags:
+  - "discovery"
+  - "claude-code"
+  - "resources"

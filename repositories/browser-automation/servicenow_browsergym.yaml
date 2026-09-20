@@ -1,0 +1,38 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "BrowserGym"
+owner: "ServiceNow"
+url: "https://github.com/ServiceNow/BrowserGym"
+description: "🌎💪 BrowserGym, a Gym environment for web task automation"
+category: browser-automation
+language: "Python"
+license: "CUSTOM/NOASSERTION"
+stars: 1369
+forks: 195
+open_issues: 39
+stars_checked_at: 2026-09-20
+last_push: 2026-07-17
+created_at: 2024-02-07
+status: STABLE
+official: true
+production_ready: conditional
+maintenance_status: sporadic
+security_status: good
+documentation_quality: excellent
+community_adoption: niche
+relevance: medium
+confidence: HIGH
+recommended_for:
+  - "web-agent benchmarking"
+  - "reproducible web environments"
+not_recommended_for:
+  - "production automation"
+related_projects:
+  - "browser-use/browser-use"
+  - "THUDM/AgentBench"
+source_verified: true
+notes: "Gym environment unifying web-agent benchmarks (WebArena, MiniWoB++, WorkArena). Research-grade reproducibility for browser agents."
+tags:
+  - "benchmark"
+  - "web-agent"
+  - "gym"
+  - "research"

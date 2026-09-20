@@ -1,0 +1,35 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "tailwindcss"
+owner: "tailwindlabs"
+url: "https://github.com/tailwindlabs/tailwindcss"
+description: "A utility-first CSS framework for rapid UI development."
+category: frontend
+language: "TypeScript"
+license: "MIT"
+stars: 97636
+forks: 6181
+open_issues: 74
+stars_checked_at: 2026-09-20
+last_push: 2026-09-08
+created_at: 2017-10-06
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: regular
+security_status: good
+documentation_quality: excellent
+community_adoption: high
+relevance: core
+confidence: VERY HIGH
+recommended_for:
+  - "utility-first styling"
+  - "design token discipline"
+not_recommended_for:
+  - (none recorded)
+related_projects:
+  - "shadcn-ui/ui"
+source_verified: true
+notes: "Preferred styling baseline in our frontend stack guidance (v4 at verification)."
+tags:
+  - "css"
+  - "design-systems"

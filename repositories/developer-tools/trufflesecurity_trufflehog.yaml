@@ -1,0 +1,36 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "trufflehog"
+owner: "trufflesecurity"
+url: "https://github.com/trufflesecurity/trufflehog"
+description: "Find, verify, and analyze leaked credentials"
+category: developer-tools
+language: "Go"
+license: "AGPL-3.0"
+stars: 27999
+forks: 2588
+open_issues: 559
+stars_checked_at: 2026-09-20
+last_push: 2026-09-18
+created_at: 2016-12-31
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: high
+relevance: high
+confidence: VERY HIGH
+recommended_for:
+  - "secret scanning"
+  - "CI secret detection"
+not_recommended_for:
+  - (none recorded)
+related_projects:
+  - (none)
+source_verified: true
+notes: "Secret detection reference for our CI and pre-commit guidance."
+tags:
+  - "security"
+  - "secrets"
+  - "ci"

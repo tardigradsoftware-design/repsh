@@ -1,0 +1,39 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "awesome-agent-skills"
+owner: "VoltAgent"
+url: "https://github.com/VoltAgent/awesome-agent-skills"
+description: "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more."
+category: skills
+language: null
+license: "MIT"
+stars: 34625
+forks: 3681
+open_issues: 29
+stars_checked_at: 2026-09-20
+last_push: 2026-09-15
+created_at: 2025-10-28
+status: ACTIVE
+official: false
+production_ready: yes
+maintenance_status: active
+security_status: acceptable
+documentation_quality: good
+community_adoption: high
+relevance: core
+confidence: HIGH
+recommended_for:
+  - "skill discovery"
+  - "agent ecosystem research"
+  - "seed source for new skills"
+not_recommended_for:
+  - "direct skill execution without review"
+related_projects:
+  - "anthropics/skills"
+  - "openai/skills"
+  - "obra/superpowers"
+source_verified: true
+notes: "1000+ curated skills across Claude Code, Codex, Cursor, Gemini CLI, OpenCode, Windsurf ecosystems. Primary discovery seed for this knowledge base."
+tags:
+  - "agent-skills"
+  - "discovery"
+  - "catalog"

@@ -1,0 +1,28 @@
+name: github-mcp-server
+repository: https://github.com/github/github-mcp-server
+npm_package: null
+pypi_package: null
+official: true
+maintainer: GitHub (Microsoft)
+purpose: "Official GitHub MCP: repos, issues, PRs, actions, code scanning, Dependabot alerts; supports toolset grouping and fine-grained tokens; Docker or remote-hosted."
+tools: [get_file_contents, create_issue, create_pull_request, push_files, list_commits, workflow_runs, search_code]
+resources: [repo-metadata, notifications]
+authentication: GitHub PAT (fine-grained strongly recommended) or OAuth via remote server
+permissions:
+  filesystem: none
+  network: restricted
+  credentials: scoped
+  database: none
+  code_execution: false
+  external_side_effects: true
+security_risk: medium
+data_exfiltration_risk: medium
+prompt_injection_surface: medium
+tool_poisoning_risk: low
+local_or_remote: both
+setup_complexity: low
+production_readiness: yes
+license: MIT
+last_verified: 2026-09-20
+notes: "Scope tokens to minimum repos/permissions; write toolsets (push_files, PR creation) should be enabled deliberately. 33k stars @ verification."
+tags: [mcp, github, ci, devops]

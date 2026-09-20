@@ -1,0 +1,28 @@
+name: chrome-devtools-mcp
+repository: https://github.com/ChromeDevTools/chrome-devtools-mcp
+npm_package: chrome-devtools-mcp
+pypi_package: null
+official: true
+maintainer: Google Chrome DevTools team
+purpose: "Gives coding agents live Chrome DevTools powers: performance traces, network inspection, console, CPU profiling, debugging of running pages — unique for perf debugging agents."
+tools: [performance_trace, network_inspect, console_read, cpu_profile, emulate, screenshot, evaluate_script]
+resources: [performance-traces, network-capture]
+authentication: none (local Chrome via CDP)
+permissions:
+  filesystem: read
+  network: full
+  credentials: scoped
+  database: none
+  code_execution: true
+  external_side_effects: true
+security_risk: medium
+data_exfiltration_risk: medium
+prompt_injection_surface: high
+tool_poisoning_risk: low
+local_or_remote: local
+setup_complexity: low
+production_readiness: yes
+license: Apache-2.0
+last_verified: 2026-09-20
+notes: "Complements playwright-mcp: Playwright MCP drives interaction; chrome-devtools-mcp explains WHY the page is slow/broken. 52k stars @ verification. Same untrusted-webpage injection caveats."
+tags: [browser, mcp, performance, debugging, chrome]

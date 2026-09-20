@@ -1,0 +1,16 @@
+task: Produce a design token sheet before any component code
+model: any
+use_case: new web project UI
+required_context: [product domain, audience, brand constraints]
+prompt: |
+  ROLE: Design engineer. Product: {domain}. Audience: {audience}.
+  OUTPUT a token sheet BEFORE components:
+  type scale (px + weights + line-heights) / space scale / neutral ramp + ONE accent /
+  radius set / shadow policy / motion durations+easings / grid + max-widths.
+  Rules: specific values, no "flexible"; accent usage <10% of surface; name the display+UI font pairing with license status.
+  Then propose component inventory (owned-components model).
+expected_output: complete token sheet + component list
+failure_modes: [gradients-as-design, multiple accents, scale-less spacing]
+evaluation: two engineers build consistent screens from it independently
+source: original
+confidence: high

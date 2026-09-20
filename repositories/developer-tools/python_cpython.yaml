@@ -1,0 +1,33 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "cpython"
+owner: "python"
+url: "https://github.com/python/cpython"
+description: "The Python programming language"
+category: developer-tools
+language: "Python"
+license: "CUSTOM/NOASSERTION"
+stars: 77229
+forks: 35984
+open_issues: 9691
+stars_checked_at: 2026-09-20
+last_push: 2026-09-20
+created_at: 2017-02-10
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: high
+relevance: medium
+confidence: VERY HIGH
+recommended_for:
+  - "language reference"
+not_recommended_for:
+  - (none recorded)
+related_projects:
+  - (none)
+source_verified: true
+notes: "Reference for Python semantics."
+tags:
+  - "python"

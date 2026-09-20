@@ -1,0 +1,28 @@
+name: sequential-thinking
+repository: https://github.com/modelcontextprotocol/servers
+npm_package: "@modelcontextprotocol/server-sequential-thinking"
+pypi_package: null
+official: true
+maintainer: MCP org (reference server)
+purpose: "Structured dynamic/reflective thought sequences via a tool interface — an explicit public reasoning scaffold for agents (ReAct-style)."
+tools: [sequentialthinking]
+resources: []
+authentication: none
+permissions:
+  filesystem: none
+  network: none
+  credentials: none
+  database: none
+  code_execution: false
+  external_side_effects: false
+security_risk: low
+data_exfiltration_risk: low
+prompt_injection_surface: low
+tool_poisoning_risk: low
+local_or_remote: local
+setup_complexity: trivial
+production_readiness: yes
+license: CUSTOM/NOASSERTION
+last_verified: 2026-09-20
+notes: "Value = forcing structured decomposition/revision instead of one-shot answers. Pair with skills/reasoning/decomposition-first."
+tags: [mcp, reasoning, structure]

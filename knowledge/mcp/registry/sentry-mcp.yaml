@@ -1,0 +1,28 @@
+name: sentry-mcp
+repository: https://github.com/getsentry/sentry-mcp
+npm_package: "@sentry/mcp-server"
+pypi_package: null
+official: true
+maintainer: Sentry
+purpose: "Error/issue triage for agents: pull recent production errors, stack traces, event context into debugging workflows."
+tools: [get_issue_details, list_issues, get_trace]
+resources: [issue-data, stacktraces]
+authentication: Sentry auth token (user or OAuth)
+permissions:
+  filesystem: none
+  network: restricted
+  credentials: scoped
+  database: none
+  code_execution: false
+  external_side_effects: false
+security_risk: low
+data_exfiltration_risk: medium
+prompt_injection_surface: low
+tool_poisoning_risk: low
+local_or_remote: both
+setup_complexity: low
+production_readiness: yes
+license: CUSTOM/NOASSERTION
+last_verified: 2026-09-20
+notes: "Official from Sentry; feed into workflows/bug-investigation. Error payloads may contain user data — handle per privacy policy of the consuming org."
+tags: [mcp, observability, debugging]

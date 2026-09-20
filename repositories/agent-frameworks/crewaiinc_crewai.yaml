@@ -1,0 +1,38 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "crewAI"
+owner: "crewAIInc"
+url: "https://github.com/crewAIInc/crewAI"
+description: "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks."
+category: agent-frameworks
+language: "Python"
+license: "MIT"
+stars: 58797
+forks: 8518
+open_issues: 411
+stars_checked_at: 2026-09-20
+last_push: 2026-09-19
+created_at: 2023-10-27
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: high
+relevance: high
+confidence: VERY HIGH
+recommended_for:
+  - "role-based multi-agent crews"
+  - "rapid prototyping of agent teams"
+not_recommended_for:
+  - "fine-grained state control needs"
+related_projects:
+  - "microsoft/agent-framework"
+  - "langchain-ai/langgraph"
+source_verified: true
+notes: "Role-playing autonomous agent orchestration. High adoption; opinionated crew/process abstractions."
+tags:
+  - "agent-framework"
+  - "multi-agent"
+  - "role-based"
+  - "python"

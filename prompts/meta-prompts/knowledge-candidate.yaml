@@ -1,0 +1,15 @@
+task: Convert session learnings into a knowledge candidate (never core)
+model: any
+use_case: self-improving KB loop
+required_context: [session summary, what worked/failed]
+prompt: |
+  From this session, extract: what worked / what failed + cause / sources that were
+  outdated / skills that were missing / workarounds found.
+  OUTPUT one candidate record per item (experimental tier): claim, evidence from the
+  session, proposed KB location, proposed test that would validate it.
+  HARD RULE: candidates go to experimental/ with confidence UNVERIFIED. Never self-promote.
+expected_output: structured candidates with evidence
+failure_modes: [session narratives, unvalidated claims, PII inclusion]
+evaluation: human review can verify each claim from cited session evidence
+source: original
+confidence: high

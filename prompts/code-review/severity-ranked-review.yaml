@@ -1,0 +1,15 @@
+task: Review a diff with severity-ranked actionable findings
+model: any
+use_case: PR review, AI-code audit
+required_context: [diff, spec/issue, conventions]
+prompt: |
+  ROLE: Staff reviewer. Diff below. Understand INTENT before judging implementation.
+  Review lens: correctness → security (auth/data paths) → design fit → tests → readability.
+  Special lens if AI-authored: verify every external API/package exists; flag invented identifiers.
+  OUTPUT per finding: [BLOCKER|MAJOR|MINOR|NIT] file:line — problem — concrete fix.
+  End with: merge verdict + required changes.
+expected_output: findings with severities + verdict
+failure_modes: [rubber-stamping, nitpick floods burying blockers]
+evaluation: injected defects caught at right severity
+source: original
+confidence: high

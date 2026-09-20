@@ -1,0 +1,35 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "excalidraw"
+owner: "excalidraw"
+url: "https://github.com/excalidraw/excalidraw"
+description: "Virtual whiteboard for sketching hand-drawn like diagrams"
+category: frontend
+language: "TypeScript"
+license: "MIT"
+stars: 132474
+forks: 15375
+open_issues: 3488
+stars_checked_at: 2026-09-20
+last_push: 2026-09-19
+created_at: 2020-01-02
+status: ACTIVE
+official: false
+production_ready: yes
+maintenance_status: active
+security_status: acceptable
+documentation_quality: good
+community_adoption: massive
+relevance: low
+confidence: HIGH
+recommended_for:
+  - "diagram UX reference"
+  - "whiteboard embedding"
+not_recommended_for:
+  - (none recorded)
+related_projects:
+  - (none)
+source_verified: true
+notes: "Included as a UX/canvas interaction reference for agent-built tools."
+tags:
+  - "ux-reference"
+  - "canvas"

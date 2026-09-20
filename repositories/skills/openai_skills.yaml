@@ -1,0 +1,37 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "skills"
+owner: "openai"
+url: "https://github.com/openai/skills"
+description: "Skills Catalog for Codex"
+category: skills
+language: "Python"
+license: "CUSTOM/NOASSERTION"
+stars: 27492
+forks: 1854
+open_issues: 298
+stars_checked_at: 2026-09-20
+last_push: 2026-09-08
+created_at: 2025-11-25
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: regular
+security_status: good
+documentation_quality: excellent
+community_adoption: high
+relevance: high
+confidence: VERY HIGH
+recommended_for:
+  - "skill format study"
+  - "Codex ecosystem research"
+not_recommended_for:
+  - "production use without license check"
+related_projects:
+  - "anthropics/skills"
+  - "VoltAgent/awesome-agent-skills"
+source_verified: true
+notes: "OpenAI's Skills Catalog for Codex. No SPDX license detected at verification — treat as reference-only. Historical note: the repo evolved from an earlier skills concept; verify current status before relying on it."
+tags:
+  - "agent-skills"
+  - "official"
+  - "format-reference"

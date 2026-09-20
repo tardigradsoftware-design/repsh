@@ -1,0 +1,40 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "llama_index"
+owner: "run-llama"
+url: "https://github.com/run-llama/llama_index"
+description: "LlamaIndex is the document processing platform for AI"
+category: agent-frameworks
+language: "Python"
+license: "MIT"
+stars: 52240
+forks: 8177
+open_issues: 806
+stars_checked_at: 2026-09-20
+last_push: 2026-09-19
+created_at: 2022-11-02
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: high
+relevance: high
+confidence: VERY HIGH
+recommended_for:
+  - "RAG pipelines"
+  - "document processing"
+  - "data connectors"
+  - "retrieval-heavy agents"
+not_recommended_for:
+  - "pure orchestration without retrieval needs"
+related_projects:
+  - "deepset-ai/haystack"
+source_verified: true
+notes: "Document processing platform for AI: ingestion, indexing, retrieval, agents. Broadest data-connector ecosystem."
+tags:
+  - "rag"
+  - "retrieval"
+  - "data"
+  - "python"
+  - "ts"

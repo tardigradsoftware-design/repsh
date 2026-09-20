@@ -1,0 +1,38 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "playwright-mcp"
+owner: "microsoft"
+url: "https://github.com/microsoft/playwright-mcp"
+description: "Playwright MCP server"
+category: mcp-servers
+language: "TypeScript"
+license: "Apache-2.0"
+stars: 37370
+forks: 3175
+open_issues: 5
+stars_checked_at: 2026-09-20
+last_push: 2026-09-18
+created_at: 2025-03-21
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: high
+relevance: core
+confidence: VERY HIGH
+recommended_for:
+  - "browser control for coding agents"
+  - "accessibility-tree-driven automation"
+  - "E2E test authoring"
+not_recommended_for:
+  - "massive parallel scraping"
+related_projects:
+  - "browser-use/browser-use"
+  - "ChromeDevTools/chrome-devtools-mcp"
+source_verified: true
+notes: "Official Playwright MCP. Operates via the accessibility tree rather than screenshots — fast, deterministic, and LLM-friendly. Ships .github/skills-style agent integrations in-repo."
+tags:
+  - "mcp"
+  - "browser"
+  - "accessibility-tree"

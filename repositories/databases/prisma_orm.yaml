@@ -1,0 +1,37 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "orm"
+owner: "prisma"
+url: "https://github.com/prisma/orm"
+description: "Next-generation ORM for Node.js & TypeScript | PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, MongoDB and CockroachDB"
+category: databases
+language: "TypeScript"
+license: "Apache-2.0"
+stars: 47638
+forks: 2538
+open_issues: 2648
+stars_checked_at: 2026-09-20
+last_push: 2026-09-18
+created_at: 2019-06-20
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: high
+relevance: high
+confidence: VERY HIGH
+recommended_for:
+  - "schema-first DX"
+  - "migrations"
+  - "multi-DB support"
+not_recommended_for:
+  - "edge-heavy workloads (driver adapters changing fast)"
+related_projects:
+  - "drizzle-team/drizzle-orm"
+source_verified: true
+notes: "Mature schema-first ORM; strong docs and migration tooling. NOTE: repo renamed prisma/prisma -> prisma/orm (verified 2026-09-20)."
+tags:
+  - "orm"
+  - "typescript"
+  - "migrations"

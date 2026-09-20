@@ -1,0 +1,28 @@
+name: filesystem-mcp
+repository: https://github.com/modelcontextprotocol/servers
+npm_package: "@modelcontextprotocol/server-filesystem"
+pypi_package: null
+official: true
+maintainer: Anthropic / MCP org (reference server)
+purpose: "Reference filesystem access server: read/write files under configured roots; the canonical pattern for sandboxed file tools."
+tools: [read_file, write_file, list_directory, search_files, get_file_info, directory_tree]
+resources: [file-contents]
+authentication: none (local process, root-scoped)
+permissions:
+  filesystem: read-write
+  network: none
+  credentials: none
+  database: none
+  code_execution: false
+  external_side_effects: false
+security_risk: medium
+data_exfiltration_risk: low
+prompt_injection_surface: low
+tool_poisoning_risk: low
+local_or_remote: local
+setup_complexity: trivial
+production_readiness: yes
+license: CUSTOM/NOASSERTION
+last_verified: 2026-09-20
+notes: "Safety model = allowed directories only. Mount the narrowest possible root. Part of modelcontextprotocol/servers (per-file licensing; check headers)."
+tags: [mcp, filesystem, reference]

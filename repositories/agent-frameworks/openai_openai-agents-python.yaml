@@ -1,0 +1,40 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "openai-agents-python"
+owner: "openai"
+url: "https://github.com/openai/openai-agents-python"
+description: "A lightweight, powerful framework for multi-agent workflows"
+category: agent-frameworks
+language: "Python"
+license: "MIT"
+stars: 29571
+forks: 4774
+open_issues: 50
+stars_checked_at: 2026-09-20
+last_push: 2026-09-20
+created_at: 2025-03-11
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: high
+relevance: high
+confidence: VERY HIGH
+recommended_for:
+  - "OpenAI-ecosystem agents"
+  - "handoffs pattern"
+  - "guardrails"
+  - "lightweight multi-agent"
+not_recommended_for:
+  - "model-agnostic requirements (verify current state)"
+related_projects:
+  - "langchain-ai/langgraph"
+  - "google/adk-python"
+source_verified: true
+notes: "Lightweight multi-agent framework: agents, handoffs, guardrails, sessions, tracing."
+tags:
+  - "agent-framework"
+  - "lightweight"
+  - "handoffs"
+  - "python"

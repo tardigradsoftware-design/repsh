@@ -1,0 +1,28 @@
+name: supabase-mcp
+repository: https://github.com/supabase/mcp
+npm_package: "@supabase/mcp-server-supabase"
+pypi_package: null
+official: true
+maintainer: Supabase
+purpose: "Manage Supabase projects: schema/migrations, SQL execution, auth admin, logs, branch management; destructive tool groups are opt-in via feature flags."
+tools: [list_tables, apply_migration, execute_sql, get_logs, generate_typescript_types]
+resources: [project-config, schema]
+authentication: Supabase access token (PAT) + project-ref scoping
+permissions:
+  filesystem: none
+  network: restricted
+  credentials: scoped
+  database: read-write
+  code_execution: false
+  external_side_effects: true
+security_risk: high
+data_exfiltration_risk: high
+prompt_injection_surface: medium
+tool_poisoning_risk: low
+local_or_remote: local
+setup_complexity: low
+production_readiness: conditional
+license: Apache-2.0
+last_verified: 2026-09-20
+notes: "DANGER: execute_sql/apply_migration against production can destroy data; RLS bypass via service role. REQUIRED mitigations: use a dev/staging project ref, read-only token where possible, enable destructive flags only in sandbox. Point agents at our knowledge/databases/rls-patterns.md."
+tags: [mcp, database, postgres, supabase, saas]

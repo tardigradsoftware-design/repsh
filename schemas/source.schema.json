@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "source.schema.json",
+  "title": "Research Source",
+  "description": "Any external source of knowledge: paper, docs, blog, dataset, discussion.",
+  "type": "object",
+  "required": ["title", "type", "url", "confidence", "verified_at"],
+  "properties": {
+    "title": { "type": "string" },
+    "type": {
+      "enum": ["official", "research-paper", "github-repository", "official-docs", "benchmark", "dataset", "agent-skill", "framework", "mcp", "tool", "blog", "tutorial", "discussion", "video", "example", "case-study", "specification", "standard", "community", "experimental", "archived", "deprecated"]
+    },
+    "url": { "type": "string", "format": "uri" },
+    "repository": { "type": "string" },
+    "author": { "type": "string" },
+    "organization": { "type": "string" },
+    "published": { "type": "string", "format": "date" },
+    "updated": { "type": "string", "format": "date" },
+    "license": { "type": ["string", "null"] },
+    "source_quality": { "enum": ["S", "A", "B", "C", "Experimental", "Deprecated", "Unverified"] },
+    "authority": { "type": "number", "minimum": 0, "maximum": 10 },
+    "evidence": { "type": "number", "minimum": 0, "maximum": 10 },
+    "maintenance": { "type": "number", "minimum": 0, "maximum": 10 },
+    "adoption": { "type": "number", "minimum": 0, "maximum": 10 },
+    "reproducibility": { "type": "number", "minimum": 0, "maximum": 10 },
+    "relevance": { "enum": ["core", "high", "medium", "low"] },
+    "confidence": { "enum": ["VERY HIGH", "HIGH", "MEDIUM", "LOW", "UNVERIFIED", "CONFLICTING"] },
+    "summary": { "type": "string" },
+    "key_findings": { "type": "array", "items": { "type": "string" } },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "related_sources": { "type": "array", "items": { "type": "string" } },
+    "verified_at": { "type": "string", "format": "date" },
+    "expires_at": { "type": "string", "format": "date" },
+    "tags": { "type": "array", "items": { "type": "string" } }
+  }
+}

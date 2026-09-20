@@ -1,0 +1,36 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "web-ui"
+owner: "browser-use"
+url: "https://github.com/browser-use/web-ui"
+description: "🖥️ Run AI Agent in your browser."
+category: browser-automation
+language: "Python"
+license: "MIT"
+stars: 16576
+forks: 2758
+open_issues: 324
+stars_checked_at: 2026-09-20
+last_push: 2026-05-15
+created_at: 2025-01-02
+status: MAINTENANCE
+official: true
+production_ready: no
+maintenance_status: stale
+security_status: unknown
+documentation_quality: excellent
+community_adoption: moderate
+relevance: medium
+confidence: MEDIUM
+recommended_for:
+  - "self-hosted browser agent UI"
+  - "demos of browser-use"
+not_recommended_for:
+  - "production deployments (verify activity)"
+related_projects:
+  - "browser-use/browser-use"
+source_verified: true
+notes: "Gradio-based UI to run browser-use agents locally or with cloud browsers. Lower recent activity than core at verification."
+tags:
+  - "browser-agent"
+  - "ui"
+  - "python"

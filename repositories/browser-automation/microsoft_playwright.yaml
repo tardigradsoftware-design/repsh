@@ -1,0 +1,41 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "playwright"
+owner: "microsoft"
+url: "https://github.com/microsoft/playwright"
+description: "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. "
+category: browser-automation
+language: "TypeScript"
+license: "Apache-2.0"
+stars: 96387
+forks: 6470
+open_issues: 202
+stars_checked_at: 2026-09-20
+last_push: 2026-09-20
+created_at: 2019-11-15
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: high
+relevance: core
+confidence: VERY HIGH
+recommended_for:
+  - "deterministic browser testing"
+  - "E2E automation"
+  - "visual regression"
+  - "agent tooling substrate"
+not_recommended_for:
+  - "non-deterministic LLM-driven exploration (combine with browser agents)"
+related_projects:
+  - "microsoft/playwright-mcp"
+  - "browser-use/browser-use"
+source_verified: true
+notes: "The foundation layer for programmatic browser control. Agents should prefer Playwright primitives for deterministic steps and reserve LLM reasoning for ambiguous states."
+tags:
+  - "testing"
+  - "e2e"
+  - "browser"
+  - "ts"
+  - "python"

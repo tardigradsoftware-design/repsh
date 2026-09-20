@@ -1,0 +1,38 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "mcp"
+owner: "supabase"
+url: "https://github.com/supabase/mcp"
+description: "Connect Supabase to your AI assistants"
+category: mcp-servers
+language: "TypeScript"
+license: "Apache-2.0"
+stars: 2915
+forks: 405
+open_issues: 124
+stars_checked_at: 2026-09-20
+last_push: 2026-09-19
+created_at: 2024-12-20
+status: ACTIVE
+official: true
+production_ready: conditional
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: niche
+relevance: core
+confidence: VERY HIGH
+recommended_for:
+  - "Supabase project management"
+  - "schema + migrations via agents"
+  - "Postgres dev workflows"
+not_recommended_for:
+  - "production databases with write access (danger of destructive ops; scope access)"
+related_projects:
+  - "github/github-mcp-server"
+source_verified: true
+notes: "Official Supabase MCP. Access-scoped via PAT; expose destructive tools deliberately. Apply our mcp security checklist before enabling write tools."
+tags:
+  - "mcp"
+  - "supabase"
+  - "postgres"
+  - "database"

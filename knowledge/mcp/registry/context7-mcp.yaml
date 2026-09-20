@@ -1,0 +1,27 @@
+name: context7
+repository: https://github.com/upstash/context7
+npm_package: "@upstash/context7-mcp"
+pypi_package: null
+official: false
+maintainer: Upstash
+purpose: "Retrieves up-to-date library documentation into agent context — directly fights stale-API hallucination; widely adopted by coding agents."
+tools: [resolve-library-id, get-library-docs]
+resources: [library-docs]
+authentication: none (public); optional API key for hosted
+permissions:
+  filesystem: none
+  network: restricted
+  credentials: none
+  database: none
+  code_execution: false
+  external_side_effects: false
+security_risk: low
+data_exfiltration_risk: low
+prompt_injection_surface: low
+tool_poisoning_risk: low
+local_or_remote: both
+setup_complexity: trivial
+production_readiness: yes
+last_verified: 2026-09-20
+notes: "Verified popular in agent ecosystems (frequently listed in awesome-agent-skills/awesome-claude-code). Stars/commits not API-verified at snapshot — treat metrics as UNVERIFIED, function as HIGH confidence."
+tags: [mcp, documentation, retrieval, context-engineering]

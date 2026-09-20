@@ -1,0 +1,33 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "go"
+owner: "golang"
+url: "https://github.com/golang/go"
+description: "The Go programming language"
+category: developer-tools
+language: "Go"
+license: "BSD-3-Clause"
+stars: 138900
+forks: 19963
+open_issues: 10155
+stars_checked_at: 2026-09-20
+last_push: 2026-09-20
+created_at: 2014-08-19
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: massive
+relevance: medium
+confidence: VERY HIGH
+recommended_for:
+  - "language reference"
+not_recommended_for:
+  - (none recorded)
+related_projects:
+  - (none)
+source_verified: true
+notes: "Reference for Go semantics."
+tags:
+  - "go"

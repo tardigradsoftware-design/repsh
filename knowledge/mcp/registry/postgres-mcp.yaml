@@ -1,0 +1,28 @@
+name: postgres-mcp (community reference)
+repository: https://github.com/modelcontextprotocol/servers
+npm_package: "@modelcontextprotocol/server-postgres"
+pypi_package: null
+official: false
+maintainer: MCP org (reference; read-only by design)
+purpose: "Read-only SQL access to Postgres for schema exploration and safe querying."
+tools: [query]
+resources: [schema]
+authentication: Postgres connection string
+permissions:
+  filesystem: none
+  network: restricted
+  credentials: scoped
+  database: read
+  code_execution: false
+  external_side_effects: false
+security_risk: medium
+data_exfiltration_risk: medium
+prompt_injection_surface: low
+tool_poisoning_risk: low
+local_or_remote: local
+setup_complexity: low
+production_readiness: conditional
+license: CUSTOM/NOASSERTION
+last_verified: 2026-09-20
+notes: "Prefer read-only role + row-level-security-scoped user. For Supabase use supabase-mcp with dev project. Verify current status — reference servers move into/out of the repo."
+tags: [mcp, database, postgres, read-only]

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent.schema.json",
+  "title": "Agent Definition",
+  "description": "A specialized agent role definition used by orchestrators.",
+  "type": "object",
+  "required": ["name", "role", "goal", "version", "status"],
+  "properties": {
+    "name": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "role": { "type": "string" },
+    "goal": { "type": "string" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "status": { "enum": ["active", "experimental", "deprecated", "draft"] },
+    "model_guidance": { "type": "string" },
+    "tools_required": { "type": "array", "items": { "type": "string" } },
+    "skills_used": { "type": "array", "items": { "type": "string" } },
+    "inputs": { "type": "array", "items": { "type": "string" } },
+    "outputs": { "type": "array", "items": { "type": "string" } },
+    "guardrails": { "type": "array", "items": { "type": "string" } },
+    "escalation": { "type": "array", "items": { "type": "string" } },
+    "tags": { "type": "array", "items": { "type": "string" } }
+  }
+}

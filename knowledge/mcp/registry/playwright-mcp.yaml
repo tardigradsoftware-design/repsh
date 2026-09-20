@@ -1,0 +1,28 @@
+name: playwright-mcp
+repository: https://github.com/microsoft/playwright-mcp
+npm_package: "@playwright/mcp"
+pypi_package: null
+official: true
+maintainer: Microsoft
+purpose: "Browser automation for agents via Playwright using the accessibility tree (not screenshots) — fast, deterministic, LLM-friendly page interaction; snapshot-based state; includes agent-oriented integration examples (.claude/skills etc.) in-repo."
+tools: [browser_navigate, browser_click, browser_type, browser_snapshot, browser_take_screenshot, browser_tabs, browser_evaluate, browser_network_requests]
+resources: [accessibility-tree-snapshots, console-messages, network-log]
+authentication: none (local browser); optional CDP/remote endpoint config
+permissions:
+  filesystem: read-write
+  network: full
+  credentials: scoped
+  database: none
+  code_execution: true
+  external_side_effects: true
+security_risk: medium
+data_exfiltration_risk: medium
+prompt_injection_surface: high
+tool_poisoning_risk: low
+local_or_remote: local
+setup_complexity: low
+production_readiness: yes
+license: Apache-2.0
+last_verified: 2026-09-20
+notes: "HIGH injection surface is inherent: web page content is untrusted input that reaches the agent. Mitigations: run in sandboxed profile, restrict allowed domains where supported, never expose prod credentials to browsing sessions. Official Playwright team project; stars 37.4k @ verification."
+tags: [browser, mcp, automation, testing, accessibility-tree]

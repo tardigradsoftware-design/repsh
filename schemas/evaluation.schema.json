@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evaluation.schema.json",
+  "title": "Evaluation Resource",
+  "description": "A benchmark, eval framework, or evaluation methodology record.",
+  "type": "object",
+  "required": ["name", "type", "url", "confidence", "verified_at"],
+  "properties": {
+    "name": { "type": "string" },
+    "type": { "enum": ["benchmark", "eval-framework", "methodology", "leaderboard", "dataset", "case-study"] },
+    "domain": { "enum": ["coding", "frontend", "agents", "research", "reasoning", "web", "general", "security", "tool-use"] },
+    "url": { "type": "string", "format": "uri" },
+    "organization": { "type": "string" },
+    "what_it_measures": { "type": "string" },
+    "method": { "type": "string" },
+    "known_limitations": { "type": "array", "items": { "type": "string" } },
+    "reproducibility": { "enum": ["high", "medium", "low", "unknown"] },
+    "contamination_risk": { "enum": ["low", "medium", "high", "unknown"] },
+    "confidence": { "enum": ["VERY HIGH", "HIGH", "MEDIUM", "LOW", "UNVERIFIED", "CONFLICTING"] },
+    "verified_at": { "type": "string", "format": "date" },
+    "expires_at": { "type": "string", "format": "date" },
+    "tags": { "type": "array", "items": { "type": "string" } }
+  }
+}

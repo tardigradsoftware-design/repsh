@@ -1,0 +1,39 @@
+# Auto-generated from GitHub API on 2026-09-20 — regenerate via scripts/update/repositories.py
+name: "ui"
+owner: "shadcn-ui"
+url: "https://github.com/shadcn-ui/ui"
+description: "Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own."
+category: frontend
+language: "TypeScript"
+license: "MIT"
+stars: 124221
+forks: 10815
+open_issues: 1841
+stars_checked_at: 2026-09-20
+last_push: 2026-09-17
+created_at: 2023-01-04
+status: ACTIVE
+official: true
+production_ready: yes
+maintenance_status: active
+security_status: good
+documentation_quality: excellent
+community_adoption: massive
+relevance: core
+confidence: VERY HIGH
+recommended_for:
+  - "copy-in component systems"
+  - "accessible primitives"
+  - "design system bootstrapping"
+not_recommended_for:
+  - "teams needing classic versioned component deps"
+related_projects:
+  - "radix-ui/primitives"
+  - "tailwindlabs/tailwindcss"
+source_verified: true
+notes: "Owned components over dependency-style UI kits; canonical base for SaaS UI in our playbooks."
+tags:
+  - "ui"
+  - "components"
+  - "radix"
+  - "tailwind"

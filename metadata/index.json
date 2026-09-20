@@ -1,0 +1,1924 @@
+{
+  "generated_at": "2026-09-20",
+  "description": "Machine-readable index of the AI Engineering Knowledge Base",
+  "counts": {
+    "repositories": 64,
+    "skills": 26,
+    "mcp_servers": 12,
+    "agents": 11,
+    "workflows": 8
+  },
+  "skills": [
+    {
+      "name": "accessibility-audit",
+      "category": "accessibility",
+      "status": "active",
+      "tier": "A",
+      "score": 8.1,
+      "tags": [
+        "accessibility",
+        "wcag",
+        "a11y",
+        "frontend"
+      ],
+      "requires": [],
+      "path": "skills/accessibility-audit/SKILL.md",
+      "summary": "WCAG-aligned accessibility review — semantics, keyboard, ARIA, contrast, motion sensitivity"
+    },
+    {
+      "name": "ai-slop-detection",
+      "category": "frontend",
+      "status": "active",
+      "tier": "A",
+      "score": 8.15,
+      "tags": [
+        "ui",
+        "ux",
+        "frontend",
+        "quality",
+        "design"
+      ],
+      "requires": [
+        "frontend-design"
+      ],
+      "path": "skills/ai-slop-detection/SKILL.md",
+      "summary": "Detect, explain, and fix generic AI-generated UI — gradients, glassmorphism abuse, fake metrics, layout monotony — and rewrite toward coherent design"
+    },
+    {
+      "name": "api-design",
+      "category": "backend",
+      "status": "active",
+      "tier": "A",
+      "score": 7.95,
+      "tags": [
+        "api",
+        "rest",
+        "architecture",
+        "backend"
+      ],
+      "requires": [],
+      "path": "skills/api-design/SKILL.md",
+      "summary": "Contract-first API design — REST resources, versioning, pagination, errors, and consistency rules"
+    },
+    {
+      "name": "backend-engineering",
+      "category": "backend",
+      "status": "active",
+      "tier": "A",
+      "score": 8.15,
+      "tags": [
+        "backend",
+        "api",
+        "nodejs",
+        "python",
+        "queues"
+      ],
+      "requires": [
+        "research-before-code",
+        "api-design"
+      ],
+      "path": "skills/backend-engineering/SKILL.md",
+      "summary": "API and service implementation patterns — FastAPI/NestJS, background jobs, queues, event-driven design with verified current APIs"
+    },
+    {
+      "name": "browser-testing",
+      "category": "testing",
+      "status": "active",
+      "tier": "S",
+      "score": 8.6,
+      "tags": [
+        "testing",
+        "e2e",
+        "playwright",
+        "visual-regression"
+      ],
+      "requires": [
+        "testing"
+      ],
+      "path": "skills/browser-testing/SKILL.md",
+      "summary": "Playwright-based E2E and visual regression testing for web apps, including agent-driven exploration patterns"
+    },
+    {
+      "name": "code-review",
+      "category": "quality",
+      "status": "active",
+      "tier": "A",
+      "score": 7.95,
+      "tags": [
+        "review",
+        "quality",
+        "core"
+      ],
+      "requires": [],
+      "path": "skills/code-review/SKILL.md",
+      "summary": "Structured code review — correctness, security, architecture fit, test quality, with actionable severity-ranked feedback"
+    },
+    {
+      "name": "competitive-analysis",
+      "category": "research",
+      "status": "active",
+      "tier": "A",
+      "score": 7.35,
+      "tags": [
+        "research",
+        "product",
+        "ux",
+        "business"
+      ],
+      "requires": [
+        "web-research"
+      ],
+      "path": "skills/competitive-analysis/SKILL.md",
+      "summary": "Analyze competitor products/sites for feature, UX, and positioning insight — extract principles, never copy"
+    },
+    {
+      "name": "context-engineering",
+      "category": "ai-engineering",
+      "status": "active",
+      "tier": "A",
+      "score": 8.05,
+      "tags": [
+        "context",
+        "retrieval",
+        "core",
+        "agents"
+      ],
+      "requires": [],
+      "path": "skills/context-engineering/SKILL.md",
+      "summary": "Give AI the right information at the right time — selection, compression, progressive disclosure, and pollution control"
+    },
+    {
+      "name": "database-design",
+      "category": "database",
+      "status": "active",
+      "tier": "A",
+      "score": 8.15,
+      "tags": [
+        "database",
+        "postgres",
+        "rls",
+        "saas",
+        "drizzle",
+        "supabase"
+      ],
+      "requires": [
+        "research-before-code"
+      ],
+      "path": "skills/database-design/SKILL.md",
+      "summary": "Relational schema design — modeling, indexing, RLS, multi-tenancy, migrations with Postgres-first discipline"
+    },
+    {
+      "name": "debugging",
+      "category": "debugging",
+      "status": "active",
+      "tier": "A",
+      "score": 8.05,
+      "tags": [
+        "debugging",
+        "core",
+        "quality"
+      ],
+      "requires": [],
+      "path": "skills/debugging/SKILL.md",
+      "summary": "Systematic bug investigation — reproduce, isolate, hypothesize, verify, fix with regression proof"
+    },
+    {
+      "name": "documentation",
+      "category": "documentation",
+      "status": "active",
+      "tier": "A",
+      "score": 7.6,
+      "tags": [
+        "documentation",
+        "core"
+      ],
+      "requires": [],
+      "path": "skills/documentation/SKILL.md",
+      "summary": "Writing docs that stay true — READMEs, runbooks, ADRs, and knowledge notes with verification dates and audience discipline"
+    },
+    {
+      "name": "evidence-validation",
+      "category": "meta",
+      "status": "active",
+      "tier": "A",
+      "score": 8.4,
+      "tags": [
+        "research",
+        "validation",
+        "fact-checking"
+      ],
+      "requires": [
+        "source-validation"
+      ],
+      "path": "skills/evidence-validation/SKILL.md",
+      "summary": "Separate fact from recommendation from fabrication — grade claims (SUPPORTED/PARTIALLY/UNSUPPORTED/CONFLICTING) with cited evidence"
+    },
+    {
+      "name": "frontend-design",
+      "category": "frontend",
+      "status": "active",
+      "tier": "A",
+      "score": 8.2,
+      "tags": [
+        "ui",
+        "ux",
+        "frontend",
+        "design",
+        "saas",
+        "web"
+      ],
+      "requires": [
+        "research-before-code",
+        "ai-slop-detection"
+      ],
+      "path": "skills/frontend-design/SKILL.md",
+      "summary": "Professional frontend design workflow — coherent design systems, premium SaaS aesthetics, and disciplined visual decisions for web applications"
+    },
+    {
+      "name": "frontend-implementation",
+      "category": "frontend",
+      "status": "active",
+      "tier": "S",
+      "score": 8.75,
+      "tags": [
+        "frontend",
+        "nextjs",
+        "react",
+        "typescript",
+        "tailwind"
+      ],
+      "requires": [
+        "frontend-design",
+        "research-before-code"
+      ],
+      "path": "skills/frontend-implementation/SKILL.md",
+      "summary": "Verified-stack frontend implementation — Next.js + TypeScript + Tailwind + shadcn/Radix with current-API discipline"
+    },
+    {
+      "name": "performance-audit",
+      "category": "performance",
+      "status": "active",
+      "tier": "A",
+      "score": 8.0,
+      "tags": [
+        "performance",
+        "web-vitals",
+        "frontend",
+        "core"
+      ],
+      "requires": [],
+      "path": "skills/performance-audit/SKILL.md",
+      "summary": "Web performance audit — Core Web Vitals, bundle/asset analysis, rendering bottlenecks with measured evidence"
+    },
+    {
+      "name": "project-planning",
+      "category": "planning",
+      "status": "active",
+      "tier": "A",
+      "score": 7.8,
+      "tags": [
+        "planning",
+        "core",
+        "requirements"
+      ],
+      "requires": [
+        "research-before-code"
+      ],
+      "path": "skills/project-planning/SKILL.md",
+      "summary": "Task decomposition and milestone planning — requirements → scope → milestones → risks, with explicit assumptions"
+    },
+    {
+      "name": "prompt-engineering",
+      "category": "ai-engineering",
+      "status": "active",
+      "tier": "A",
+      "score": 7.95,
+      "tags": [
+        "prompts",
+        "ai-engineering",
+        "core"
+      ],
+      "requires": [
+        "context-engineering"
+      ],
+      "path": "skills/prompt-engineering/SKILL.md",
+      "summary": "Structured prompt design — role/task/context/format/eval scaffolding, few-shot discipline, verification loops"
+    },
+    {
+      "name": "reasoning",
+      "category": "reasoning",
+      "status": "active",
+      "tier": "A",
+      "score": 7.8,
+      "tags": [
+        "reasoning",
+        "agents",
+        "research"
+      ],
+      "requires": [
+        "prompt-engineering"
+      ],
+      "path": "skills/reasoning/SKILL.md",
+      "summary": "Structured reasoning patterns for agents — decomposition, verification, self-consistency, reflection applied at the right dose"
+    },
+    {
+      "name": "repository-analysis",
+      "category": "research",
+      "status": "active",
+      "tier": "A",
+      "score": 7.8,
+      "tags": [
+        "research",
+        "onboarding",
+        "architecture"
+      ],
+      "requires": [],
+      "path": "skills/repository-analysis/SKILL.md",
+      "summary": "Rapidly understand an unfamiliar codebase — architecture, conventions, risks — before modifying it"
+    },
+    {
+      "name": "research-before-code",
+      "category": "meta",
+      "status": "active",
+      "tier": "S",
+      "score": 8.5,
+      "tags": [
+        "research",
+        "planning",
+        "decision-making",
+        "core"
+      ],
+      "requires": [
+        "source-validation",
+        "web-research"
+      ],
+      "path": "skills/research-before-code/SKILL.md",
+      "summary": "Force research-first behavior — investigate the problem space, existing solutions, and proven patterns before writing any non-trivial code"
+    },
+    {
+      "name": "research-synthesis",
+      "category": "research",
+      "status": "active",
+      "tier": "A",
+      "score": 7.75,
+      "tags": [
+        "research",
+        "synthesis",
+        "core"
+      ],
+      "requires": [
+        "web-research",
+        "source-validation",
+        "evidence-validation"
+      ],
+      "path": "skills/research-synthesis/SKILL.md",
+      "summary": "Combine multiple verified sources into a single honest answer — with confidence labels, conflicts surfaced, and limitations stated"
+    },
+    {
+      "name": "reverse-engineering-public-systems",
+      "category": "research",
+      "status": "active",
+      "tier": "A",
+      "score": 7.35,
+      "tags": [
+        "research",
+        "integration",
+        "ethics"
+      ],
+      "requires": [
+        "source-validation"
+      ],
+      "path": "skills/reverse-engineering-public-systems/SKILL.md",
+      "summary": "Understand publicly documented or observable systems (APIs, formats, protocols) through legal, documented signals only"
+    },
+    {
+      "name": "security-audit",
+      "category": "security",
+      "status": "active",
+      "tier": "A",
+      "score": 8.2,
+      "tags": [
+        "security",
+        "owasp",
+        "llm",
+        "mcp",
+        "core"
+      ],
+      "requires": [],
+      "path": "skills/security-audit/SKILL.md",
+      "summary": "Web + LLM application security review — OWASP Top 10, auth/RLS verification, prompt-injection and MCP risk assessment"
+    },
+    {
+      "name": "source-validation",
+      "category": "meta",
+      "status": "active",
+      "tier": "S",
+      "score": 8.55,
+      "tags": [
+        "research",
+        "validation",
+        "core"
+      ],
+      "requires": [],
+      "path": "skills/source-validation/SKILL.md",
+      "summary": "Verify external sources before trusting or recording them — existence, license, maintenance, adoption, and claim support"
+    },
+    {
+      "name": "testing",
+      "category": "testing",
+      "status": "active",
+      "tier": "A",
+      "score": 8.15,
+      "tags": [
+        "testing",
+        "quality",
+        "e2e",
+        "vitest",
+        "playwright"
+      ],
+      "requires": [],
+      "path": "skills/testing/SKILL.md",
+      "summary": "Proportional test strategy — unit, integration, E2E pyramid with the right tool per layer"
+    },
+    {
+      "name": "web-research",
+      "category": "research",
+      "status": "active",
+      "tier": "A",
+      "score": 8.15,
+      "tags": [
+        "research",
+        "web",
+        "core"
+      ],
+      "requires": [
+        "source-validation"
+      ],
+      "path": "skills/web-research/SKILL.md",
+      "summary": "Multi-source web research with search, cross-checking, extraction, citation, and ranking — never decide on a single source"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "crewAI",
+      "owner": "crewAIInc",
+      "url": "https://github.com/crewAIInc/crewAI",
+      "category": "agent-frameworks",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 58797,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "agent-framework",
+        "multi-agent",
+        "role-based",
+        "python"
+      ],
+      "path": "repositories/agent-frameworks/crewaiinc_crewai.yaml",
+      "summary": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks."
+    },
+    {
+      "name": "haystack",
+      "owner": "deepset-ai",
+      "url": "https://github.com/deepset-ai/haystack",
+      "category": "agent-frameworks",
+      "status": "ACTIVE",
+      "license": "Apache-2.0",
+      "stars": 26559,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "rag",
+        "pipelines",
+        "context-engineering",
+        "python"
+      ],
+      "path": "repositories/agent-frameworks/deepset-ai_haystack.yaml",
+      "summary": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems."
+    },
+    {
+      "name": "adk-python",
+      "owner": "google",
+      "url": "https://github.com/google/adk-python",
+      "category": "agent-frameworks",
+      "status": "ACTIVE",
+      "license": "Apache-2.0",
+      "stars": 21578,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "agent-framework",
+        "gemini",
+        "python",
+        "java"
+      ],
+      "path": "repositories/agent-frameworks/google_adk-python.yaml",
+      "summary": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control."
+    },
+    {
+      "name": "langgraph",
+      "owner": "langchain-ai",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "category": "agent-frameworks",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 41987,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "agent-framework",
+        "graph",
+        "stateful",
+        "python",
+        "js"
+      ],
+      "path": "repositories/agent-frameworks/langchain-ai_langgraph.yaml",
+      "summary": "Build resilient agents."
+    },
+    {
+      "name": "agent-framework",
+      "owner": "microsoft",
+      "url": "https://github.com/microsoft/agent-framework",
+      "category": "agent-frameworks",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 13604,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.6,
+      "tags": [
+        "agent-framework",
+        "multi-agent",
+        "python",
+        "dotnet"
+      ],
+      "path": "repositories/agent-frameworks/microsoft_agent-framework.yaml",
+      "summary": "A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .NET."
+    },
+    {
+      "name": "autogen",
+      "owner": "microsoft",
+      "url": "https://github.com/microsoft/autogen",
+      "category": "agent-frameworks",
+      "status": "MAINTENANCE",
+      "license": "CC-BY-4.0",
+      "stars": 61070,
+      "stars_checked_at": "2026-09-20",
+      "tier": "B",
+      "score": 6.7,
+      "tags": [
+        "agent-framework",
+        "multi-agent",
+        "legacy"
+      ],
+      "path": "repositories/agent-frameworks/microsoft_autogen.yaml",
+      "summary": "A programming framework for agentic AI"
+    },
+    {
+      "name": "semantic-kernel",
+      "owner": "microsoft",
+      "url": "https://github.com/microsoft/semantic-kernel",
+      "category": "agent-frameworks",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 28580,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "agent-framework",
+        "dotnet",
+        "enterprise"
+      ],
+      "path": "repositories/agent-frameworks/microsoft_semantic-kernel.yaml",
+      "summary": "Integrate cutting-edge LLM technology quickly and easily into your apps"
+    },
+    {
+      "name": "hermes-agent",
+      "owner": "NousResearch",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "category": "agent-frameworks",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 247254,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 9.2,
+      "tags": [
+        "agent-framework",
+        "memory",
+        "self-improvement",
+        "skills"
+      ],
+      "path": "repositories/agent-frameworks/nousresearch_hermes-agent.yaml",
+      "summary": "The agent that grows with you"
+    },
+    {
+      "name": "openai-agents-python",
+      "owner": "openai",
+      "url": "https://github.com/openai/openai-agents-python",
+      "category": "agent-frameworks",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 29571,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "agent-framework",
+        "lightweight",
+        "handoffs",
+        "python"
+      ],
+      "path": "repositories/agent-frameworks/openai_openai-agents-python.yaml",
+      "summary": "A lightweight, powerful framework for multi-agent workflows"
+    },
+    {
+      "name": "pydantic-ai",
+      "owner": "pydantic",
+      "url": "https://github.com/pydantic/pydantic-ai",
+      "category": "agent-frameworks",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 20066,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "agent-framework",
+        "typed",
+        "structured-output",
+        "mcp",
+        "python"
+      ],
+      "path": "repositories/agent-frameworks/pydantic_pydantic-ai.yaml",
+      "summary": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end."
+    },
+    {
+      "name": "llama_index",
+      "owner": "run-llama",
+      "url": "https://github.com/run-llama/llama_index",
+      "category": "agent-frameworks",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 52240,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "rag",
+        "retrieval",
+        "data",
+        "python",
+        "ts"
+      ],
+      "path": "repositories/agent-frameworks/run-llama_llama_index.yaml",
+      "summary": "LlamaIndex is the document processing platform for AI"
+    },
+    {
+      "name": "dspy",
+      "owner": "stanfordnlp",
+      "url": "https://github.com/stanfordnlp/dspy",
+      "category": "agent-frameworks",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 38151,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "prompt-optimization",
+        "pipelines",
+        "research",
+        "python"
+      ],
+      "path": "repositories/agent-frameworks/stanfordnlp_dspy.yaml",
+      "summary": "DSPy: The framework for programming—not prompting—language models"
+    },
+    {
+      "name": "express",
+      "owner": "expressjs",
+      "url": "https://github.com/expressjs/express",
+      "category": "backend",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 69459,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "nodejs",
+        "api",
+        "minimal"
+      ],
+      "path": "repositories/backend/expressjs_express.yaml",
+      "summary": "Fast, unopinionated, minimalist web framework for node."
+    },
+    {
+      "name": "fastapi",
+      "owner": "fastapi",
+      "url": "https://github.com/fastapi/fastapi",
+      "category": "backend",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 102470,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 9.2,
+      "tags": [
+        "python",
+        "api",
+        "async"
+      ],
+      "path": "repositories/backend/fastapi_fastapi.yaml",
+      "summary": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+    },
+    {
+      "name": "gin",
+      "owner": "gin-gonic",
+      "url": "https://github.com/gin-gonic/gin",
+      "category": "backend",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 89236,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "go",
+        "api",
+        "performance"
+      ],
+      "path": "repositories/backend/gin-gonic_gin.yaml",
+      "summary": "Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices."
+    },
+    {
+      "name": "nest",
+      "owner": "nestjs",
+      "url": "https://github.com/nestjs/nest",
+      "category": "backend",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 76694,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "nodejs",
+        "api",
+        "architecture"
+      ],
+      "path": "repositories/backend/nestjs_nest.yaml",
+      "summary": "A progressive Node.js framework for building efficient, scalable, and enterprise-grade server-side applications with TypeScript/JavaScript 🚀"
+    },
+    {
+      "name": "bun",
+      "owner": "oven-sh",
+      "url": "https://github.com/oven-sh/bun",
+      "category": "backend",
+      "status": "ACTIVE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 95985,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "runtime",
+        "javascript",
+        "toolchain"
+      ],
+      "path": "repositories/backend/oven-sh_bun.yaml",
+      "summary": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one"
+    },
+    {
+      "name": "browser-use",
+      "owner": "browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "category": "browser-automation",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 115411,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 9.2,
+      "tags": [
+        "browser-agent",
+        "python",
+        "playwright"
+      ],
+      "path": "repositories/browser-automation/browser-use_browser-use.yaml",
+      "summary": "Agents that use the browser."
+    },
+    {
+      "name": "web-ui",
+      "owner": "browser-use",
+      "url": "https://github.com/browser-use/web-ui",
+      "category": "browser-automation",
+      "status": "MAINTENANCE",
+      "license": "MIT",
+      "stars": 16576,
+      "stars_checked_at": "2026-09-20",
+      "tier": "B",
+      "score": 6.4,
+      "tags": [
+        "browser-agent",
+        "ui",
+        "python"
+      ],
+      "path": "repositories/browser-automation/browser-use_web-ui.yaml",
+      "summary": "🖥️ Run AI Agent in your browser."
+    },
+    {
+      "name": "playwright",
+      "owner": "microsoft",
+      "url": "https://github.com/microsoft/playwright",
+      "category": "browser-automation",
+      "status": "ACTIVE",
+      "license": "Apache-2.0",
+      "stars": 96387,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "testing",
+        "e2e",
+        "browser",
+        "ts",
+        "python"
+      ],
+      "path": "repositories/browser-automation/microsoft_playwright.yaml",
+      "summary": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. "
+    },
+    {
+      "name": "BrowserGym",
+      "owner": "ServiceNow",
+      "url": "https://github.com/ServiceNow/BrowserGym",
+      "category": "browser-automation",
+      "status": "STABLE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 1369,
+      "stars_checked_at": "2026-09-20",
+      "tier": "A",
+      "score": 7.35,
+      "tags": [
+        "benchmark",
+        "web-agent",
+        "gym",
+        "research"
+      ],
+      "path": "repositories/browser-automation/servicenow_browsergym.yaml",
+      "summary": "🌎💪 BrowserGym, a Gym environment for web task automation"
+    },
+    {
+      "name": "bytebase",
+      "owner": "bytebase",
+      "url": "https://github.com/bytebase/bytebase",
+      "category": "databases",
+      "status": "ACTIVE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 14498,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.6,
+      "tags": [
+        "devops",
+        "postgres",
+        "change-management"
+      ],
+      "path": "repositories/databases/bytebase_bytebase.yaml",
+      "summary": "Database governance built for humans and agents — controlling changes and access across every major database."
+    },
+    {
+      "name": "mongo",
+      "owner": "mongodb",
+      "url": "https://github.com/mongodb/mongo",
+      "category": "databases",
+      "status": "ACTIVE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 28567,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "database",
+        "nosql"
+      ],
+      "path": "repositories/databases/mongodb_mongo.yaml",
+      "summary": "The MongoDB Database"
+    },
+    {
+      "name": "orm",
+      "owner": "prisma",
+      "url": "https://github.com/prisma/orm",
+      "category": "databases",
+      "status": "ACTIVE",
+      "license": "Apache-2.0",
+      "stars": 47638,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "orm",
+        "typescript",
+        "migrations"
+      ],
+      "path": "repositories/databases/prisma_orm.yaml",
+      "summary": "Next-generation ORM for Node.js & TypeScript | PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, MongoDB and CockroachDB"
+    },
+    {
+      "name": "redis",
+      "owner": "redis",
+      "url": "https://github.com/redis/redis",
+      "category": "databases",
+      "status": "ACTIVE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 76411,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "cache",
+        "queues"
+      ],
+      "path": "repositories/databases/redis_redis.yaml",
+      "summary": "For developers, who are building real-time data-driven applications, Redis is the preferred, fastest, and most feature-rich cache, data structure server, and document and vector query engine."
+    },
+    {
+      "name": "supabase",
+      "owner": "supabase",
+      "url": "https://github.com/supabase/supabase",
+      "category": "databases",
+      "status": "ACTIVE",
+      "license": "Apache-2.0",
+      "stars": 110369,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 9.2,
+      "tags": [
+        "postgres",
+        "baas",
+        "auth",
+        "rls"
+      ],
+      "path": "repositories/databases/supabase_supabase.yaml",
+      "summary": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications."
+    },
+    {
+      "name": "deno",
+      "owner": "denoland",
+      "url": "https://github.com/denoland/deno",
+      "category": "developer-tools",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 108472,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 9.2,
+      "tags": [
+        "runtime"
+      ],
+      "path": "repositories/developer-tools/denoland_deno.yaml",
+      "summary": "A modern runtime for JavaScript and TypeScript."
+    },
+    {
+      "name": "go",
+      "owner": "golang",
+      "url": "https://github.com/golang/go",
+      "category": "developer-tools",
+      "status": "ACTIVE",
+      "license": "BSD-3-Clause",
+      "stars": 138900,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 9.2,
+      "tags": [
+        "go"
+      ],
+      "path": "repositories/developer-tools/golang_go.yaml",
+      "summary": "The Go programming language"
+    },
+    {
+      "name": "vscode-copilot-release",
+      "owner": "microsoft",
+      "url": "https://github.com/microsoft/vscode-copilot-release",
+      "category": "developer-tools",
+      "status": "ARCHIVED",
+      "license": "CC-BY-4.0",
+      "stars": 1023,
+      "stars_checked_at": "2026-09-20",
+      "tier": "Deprecated",
+      "score": 4.45,
+      "tags": [
+        "copilot",
+        "archived"
+      ],
+      "path": "repositories/developer-tools/microsoft_vscode-copilot-release.yaml",
+      "summary": "Feedback on GitHub Copilot Chat UX in Visual Studio Code."
+    },
+    {
+      "name": "CheatSheetSeries",
+      "owner": "OWASP",
+      "url": "https://github.com/OWASP/CheatSheetSeries",
+      "category": "developer-tools",
+      "status": "ACTIVE",
+      "license": "CC-BY-SA-4.0",
+      "stars": 33228,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "security",
+        "owasp",
+        "checklists"
+      ],
+      "path": "repositories/developer-tools/owasp_cheatsheetseries.yaml",
+      "summary": "The OWASP Cheat Sheet Series was created to provide a concise collection of high value information on specific application security topics."
+    },
+    {
+      "name": "cpython",
+      "owner": "python",
+      "url": "https://github.com/python/cpython",
+      "category": "developer-tools",
+      "status": "ACTIVE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 77229,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "python"
+      ],
+      "path": "repositories/developer-tools/python_cpython.yaml",
+      "summary": "The Python programming language"
+    },
+    {
+      "name": "trufflehog",
+      "owner": "trufflesecurity",
+      "url": "https://github.com/trufflesecurity/trufflehog",
+      "category": "developer-tools",
+      "status": "ACTIVE",
+      "license": "AGPL-3.0",
+      "stars": 27999,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "security",
+        "secrets",
+        "ci"
+      ],
+      "path": "repositories/developer-tools/trufflesecurity_trufflehog.yaml",
+      "summary": "Find, verify, and analyze leaked credentials"
+    },
+    {
+      "name": "phoenix",
+      "owner": "Arize-ai",
+      "url": "https://github.com/Arize-ai/phoenix",
+      "category": "evaluation",
+      "status": "ACTIVE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 11546,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.6,
+      "tags": [
+        "observability",
+        "otel",
+        "evals",
+        "python"
+      ],
+      "path": "repositories/evaluation/arize-ai_phoenix.yaml",
+      "summary": "AI Observability & Evaluation"
+    },
+    {
+      "name": "lm-evaluation-harness",
+      "owner": "EleutherAI",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "category": "evaluation",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 14032,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.6,
+      "tags": [
+        "evaluation",
+        "benchmarks",
+        "reproducibility"
+      ],
+      "path": "repositories/evaluation/eleutherai_lm-evaluation-harness.yaml",
+      "summary": "A framework for few-shot evaluation of language models."
+    },
+    {
+      "name": "langfuse",
+      "owner": "langfuse",
+      "url": "https://github.com/langfuse/langfuse",
+      "category": "evaluation",
+      "status": "ACTIVE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 34832,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "observability",
+        "tracing",
+        "evals",
+        "ts"
+      ],
+      "path": "repositories/evaluation/langfuse_langfuse.yaml",
+      "summary": "🪢 Open source agent evals & observability: Trace, evaluate, and improve LLM applications with one open platform."
+    },
+    {
+      "name": "promptfoo",
+      "owner": "promptfoo",
+      "url": "https://github.com/promptfoo/promptfoo",
+      "category": "evaluation",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 25301,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "evaluation",
+        "ci",
+        "red-teaming",
+        "typescript"
+      ],
+      "path": "repositories/evaluation/promptfoo_promptfoo.yaml",
+      "summary": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration.  Used by OpenAI and Anthropic."
+    },
+    {
+      "name": "logfire",
+      "owner": "pydantic",
+      "url": "https://github.com/pydantic/logfire",
+      "category": "evaluation",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 4481,
+      "stars_checked_at": "2026-09-20",
+      "tier": "A",
+      "score": 8.3,
+      "tags": [
+        "observability",
+        "otel",
+        "pydantic",
+        "python"
+      ],
+      "path": "repositories/evaluation/pydantic_logfire.yaml",
+      "summary": "AI observability platform for production LLM and agent systems."
+    },
+    {
+      "name": "helm",
+      "owner": "stanford-crfm",
+      "url": "https://github.com/stanford-crfm/helm",
+      "category": "evaluation",
+      "status": "STABLE",
+      "license": "Apache-2.0",
+      "stars": 2915,
+      "stars_checked_at": "2026-09-20",
+      "tier": "A",
+      "score": 8.0,
+      "tags": [
+        "evaluation",
+        "methodology",
+        "holistic"
+      ],
+      "path": "repositories/evaluation/stanford-crfm_helm.yaml",
+      "summary": "Holistic Evaluation of Language Models (HELM) is an open source Python framework created by the Center for Research on Foundation Models (CRFM) at Stanford for holistic, reproducible and transparent evaluation of foundation models, including large language models (LLMs) and multimodal models."
+    },
+    {
+      "name": "SWE-bench",
+      "owner": "SWE-bench",
+      "url": "https://github.com/SWE-bench/SWE-bench",
+      "category": "evaluation",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 5874,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.6,
+      "tags": [
+        "benchmark",
+        "coding-agents",
+        "swe"
+      ],
+      "path": "repositories/evaluation/swe-bench_swe-bench.yaml",
+      "summary": "SWE-bench: Can Language Models Resolve Real-world Github Issues?"
+    },
+    {
+      "name": "AgentBench",
+      "owner": "THUDM",
+      "url": "https://github.com/THUDM/AgentBench",
+      "category": "evaluation",
+      "status": "STABLE",
+      "license": "Apache-2.0",
+      "stars": 3742,
+      "stars_checked_at": "2026-09-20",
+      "tier": "B",
+      "score": 6.4,
+      "tags": [
+        "benchmark",
+        "agents",
+        "multi-domain"
+      ],
+      "path": "repositories/evaluation/thudm_agentbench.yaml",
+      "summary": "A Comprehensive Benchmark to Evaluate LLMs as Agents (ICLR'24)"
+    },
+    {
+      "name": "excalidraw",
+      "owner": "excalidraw",
+      "url": "https://github.com/excalidraw/excalidraw",
+      "category": "frontend",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 132474,
+      "stars_checked_at": "2026-09-20",
+      "tier": "A",
+      "score": 8.1,
+      "tags": [
+        "ux-reference",
+        "canvas"
+      ],
+      "path": "repositories/frontend/excalidraw_excalidraw.yaml",
+      "summary": "Virtual whiteboard for sketching hand-drawn like diagrams"
+    },
+    {
+      "name": "GSAP",
+      "owner": "greensock",
+      "url": "https://github.com/greensock/GSAP",
+      "category": "frontend",
+      "status": "MAINTENANCE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 28499,
+      "stars_checked_at": "2026-09-20",
+      "tier": "B",
+      "score": 6.7,
+      "tags": [
+        "animation",
+        "scroll",
+        "timeline"
+      ],
+      "path": "repositories/frontend/greensock_gsap.yaml",
+      "summary": "GSAP (GreenSock Animation Platform), a JavaScript animation library for the modern web"
+    },
+    {
+      "name": "TypeScript",
+      "owner": "microsoft",
+      "url": "https://github.com/microsoft/TypeScript",
+      "category": "frontend",
+      "status": "ACTIVE",
+      "license": "Apache-2.0",
+      "stars": 111123,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 9.2,
+      "tags": [
+        "typescript",
+        "types"
+      ],
+      "path": "repositories/frontend/microsoft_typescript.yaml",
+      "summary": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output."
+    },
+    {
+      "name": "three.js",
+      "owner": "mrdoob",
+      "url": "https://github.com/mrdoob/three.js",
+      "category": "frontend",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 115668,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 9.2,
+      "tags": [
+        "webgl",
+        "3d",
+        "graphics"
+      ],
+      "path": "repositories/frontend/mrdoob_three.js.yaml",
+      "summary": "JavaScript 3D Library."
+    },
+    {
+      "name": "p5.js",
+      "owner": "processing",
+      "url": "https://github.com/processing/p5.js",
+      "category": "frontend",
+      "status": "ACTIVE",
+      "license": "LGPL-2.1",
+      "stars": 24010,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "canvas",
+        "creative-coding"
+      ],
+      "path": "repositories/frontend/processing_p5.js.yaml",
+      "summary": "p5.js is a client-side JS platform that empowers artists, designers, students, and anyone to learn to code and express themselves creatively on the web. It is based on the core principles of Processing. Looking for p5.js 2.0? http://beta.p5js.org"
+    },
+    {
+      "name": "primitives",
+      "owner": "radix-ui",
+      "url": "https://github.com/radix-ui/primitives",
+      "category": "frontend",
+      "status": "STABLE",
+      "license": "MIT",
+      "stars": 19307,
+      "stars_checked_at": "2026-09-20",
+      "tier": "A",
+      "score": 7.65,
+      "tags": [
+        "ui",
+        "accessibility",
+        "primitives"
+      ],
+      "path": "repositories/frontend/radix-ui_primitives.yaml",
+      "summary": "Radix Primitives is an open-source UI component library for building high-quality, accessible design systems and web apps. Maintained by @workos."
+    },
+    {
+      "name": "react",
+      "owner": "react",
+      "url": "https://github.com/react/react",
+      "category": "frontend",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 250607,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 9.2,
+      "tags": [
+        "react",
+        "ui",
+        "library"
+      ],
+      "path": "repositories/frontend/react_react.yaml",
+      "summary": "The library for web and native user interfaces."
+    },
+    {
+      "name": "ui",
+      "owner": "shadcn-ui",
+      "url": "https://github.com/shadcn-ui/ui",
+      "category": "frontend",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 124221,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 9.2,
+      "tags": [
+        "ui",
+        "components",
+        "radix",
+        "tailwind"
+      ],
+      "path": "repositories/frontend/shadcn-ui_ui.yaml",
+      "summary": "Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own."
+    },
+    {
+      "name": "tailwindcss",
+      "owner": "tailwindlabs",
+      "url": "https://github.com/tailwindlabs/tailwindcss",
+      "category": "frontend",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 97636,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.6,
+      "tags": [
+        "css",
+        "design-systems"
+      ],
+      "path": "repositories/frontend/tailwindlabs_tailwindcss.yaml",
+      "summary": "A utility-first CSS framework for rapid UI development."
+    },
+    {
+      "name": "table",
+      "owner": "TanStack",
+      "url": "https://github.com/TanStack/table",
+      "category": "frontend",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 28443,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "tables",
+        "data-grid",
+        "headless"
+      ],
+      "path": "repositories/frontend/tanstack_table.yaml",
+      "summary": "🤖 Headless UI for building powerful tables & datagrids for TS/JS -  React-Table, Vue-Table, Solid-Table, Svelte-Table"
+    },
+    {
+      "name": "chrome-devtools-mcp",
+      "owner": "ChromeDevTools",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "category": "mcp-servers",
+      "status": "ACTIVE",
+      "license": "Apache-2.0",
+      "stars": 52343,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "mcp",
+        "chrome",
+        "devtools",
+        "performance"
+      ],
+      "path": "repositories/mcp-servers/chromedevtools_chrome-devtools-mcp.yaml",
+      "summary": "Chrome DevTools for coding agents"
+    },
+    {
+      "name": "playwright-mcp",
+      "owner": "microsoft",
+      "url": "https://github.com/microsoft/playwright-mcp",
+      "category": "mcp-servers",
+      "status": "ACTIVE",
+      "license": "Apache-2.0",
+      "stars": 37370,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "mcp",
+        "browser",
+        "accessibility-tree"
+      ],
+      "path": "repositories/mcp-servers/microsoft_playwright-mcp.yaml",
+      "summary": "Playwright MCP server"
+    },
+    {
+      "name": "servers",
+      "owner": "modelcontextprotocol",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "category": "mcp-servers",
+      "status": "ACTIVE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 90483,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.6,
+      "tags": [
+        "mcp",
+        "reference",
+        "official"
+      ],
+      "path": "repositories/mcp-servers/modelcontextprotocol_servers.yaml",
+      "summary": "Model Context Protocol Servers"
+    },
+    {
+      "name": "mcp",
+      "owner": "supabase",
+      "url": "https://github.com/supabase/mcp",
+      "category": "mcp-servers",
+      "status": "ACTIVE",
+      "license": "Apache-2.0",
+      "stars": 2915,
+      "stars_checked_at": "2026-09-20",
+      "tier": "A",
+      "score": 8.3,
+      "tags": [
+        "mcp",
+        "supabase",
+        "postgres",
+        "database"
+      ],
+      "path": "repositories/mcp-servers/supabase_mcp.yaml",
+      "summary": "Connect Supabase to your AI assistants"
+    },
+    {
+      "name": "DeepSeek-R1",
+      "owner": "deepseek-ai",
+      "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+      "category": "research",
+      "status": "STABLE",
+      "license": "MIT",
+      "stars": 91984,
+      "stars_checked_at": "2026-09-20",
+      "tier": "B",
+      "score": 6.65,
+      "tags": [
+        "reasoning",
+        "open-models",
+        "rl"
+      ],
+      "path": "repositories/research/deepseek-ai_deepseek-r1.yaml",
+      "summary": ""
+    },
+    {
+      "name": "open-r1",
+      "owner": "huggingface",
+      "url": "https://github.com/huggingface/open-r1",
+      "category": "research",
+      "status": "MAINTENANCE",
+      "license": "Apache-2.0",
+      "stars": 26475,
+      "stars_checked_at": "2026-09-20",
+      "tier": "B",
+      "score": 6.7,
+      "tags": [
+        "reasoning",
+        "reproduction",
+        "datasets",
+        "training"
+      ],
+      "path": "repositories/research/huggingface_open-r1.yaml",
+      "summary": "Fully open reproduction of DeepSeek-R1"
+    },
+    {
+      "name": "gorilla",
+      "owner": "ShishirPatil",
+      "url": "https://github.com/ShishirPatil/gorilla",
+      "category": "research",
+      "status": "MAINTENANCE",
+      "license": "Apache-2.0",
+      "stars": 13037,
+      "stars_checked_at": "2026-09-20",
+      "tier": "B",
+      "score": 6.4,
+      "tags": [
+        "tool-use",
+        "function-calling",
+        "research"
+      ],
+      "path": "repositories/research/shishirpatil_gorilla.yaml",
+      "summary": "Gorilla: Training and Evaluating LLMs for Function Calls (Tool Calls)"
+    },
+    {
+      "name": "agents.md",
+      "owner": "agentsmd",
+      "url": "https://github.com/agentsmd/agents.md",
+      "category": "skills",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 24495,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.6,
+      "tags": [
+        "standards",
+        "agent-instructions",
+        "specification"
+      ],
+      "path": "repositories/skills/agentsmd_agents.md.yaml",
+      "summary": "AGENTS.md — a simple, open format for guiding coding agents"
+    },
+    {
+      "name": "claude-code",
+      "owner": "anthropics",
+      "url": "https://github.com/anthropics/claude-code",
+      "category": "skills",
+      "status": "ACTIVE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 146830,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 9.2,
+      "tags": [
+        "coding-agents",
+        "cli",
+        "official"
+      ],
+      "path": "repositories/skills/anthropics_claude-code.yaml",
+      "summary": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands."
+    },
+    {
+      "name": "skills",
+      "owner": "anthropics",
+      "url": "https://github.com/anthropics/skills",
+      "category": "skills",
+      "status": "ACTIVE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 177220,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.9,
+      "tags": [
+        "agent-skills",
+        "official",
+        "format-reference"
+      ],
+      "path": "repositories/skills/anthropics_skills.yaml",
+      "summary": "Public repository for Agent Skills"
+    },
+    {
+      "name": "awesome-claude-code",
+      "owner": "hesreallyhim",
+      "url": "https://github.com/hesreallyhim/awesome-claude-code",
+      "category": "skills",
+      "status": "ACTIVE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 54332,
+      "stars_checked_at": "2026-09-20",
+      "tier": "A",
+      "score": 7.8,
+      "tags": [
+        "discovery",
+        "claude-code",
+        "resources"
+      ],
+      "path": "repositories/skills/hesreallyhim_awesome-claude-code.yaml",
+      "summary": "A hand-picked collection of the finest of resources for the most awesome of agents, Claude Code, the undisputed champion of coding companions, from the unstoppable team at Anthropic PBC. A delectable showcase of top tier skills, ambidextrous agents, scintillating status lines, top notch developer tooling, and also we have plugins"
+    },
+    {
+      "name": "superpowers",
+      "owner": "obra",
+      "url": "https://github.com/obra/superpowers",
+      "category": "skills",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 288946,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 9.2,
+      "tags": [
+        "agent-skills",
+        "methodology",
+        "workflow"
+      ],
+      "path": "repositories/skills/obra_superpowers.yaml",
+      "summary": "An agentic skills framework & software development methodology that works."
+    },
+    {
+      "name": "skills",
+      "owner": "openai",
+      "url": "https://github.com/openai/skills",
+      "category": "skills",
+      "status": "ACTIVE",
+      "license": "CUSTOM/NOASSERTION",
+      "stars": 27492,
+      "stars_checked_at": "2026-09-20",
+      "tier": "S",
+      "score": 8.6,
+      "tags": [
+        "agent-skills",
+        "official",
+        "format-reference"
+      ],
+      "path": "repositories/skills/openai_skills.yaml",
+      "summary": "Skills Catalog for Codex"
+    },
+    {
+      "name": "awesome-agent-skills",
+      "owner": "VoltAgent",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "category": "skills",
+      "status": "ACTIVE",
+      "license": "MIT",
+      "stars": 34625,
+      "stars_checked_at": "2026-09-20",
+      "tier": "A",
+      "score": 7.8,
+      "tags": [
+        "agent-skills",
+        "discovery",
+        "catalog"
+      ],
+      "path": "repositories/skills/voltagent_awesome-agent-skills.yaml",
+      "summary": "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more."
+    }
+  ],
+  "mcp_servers": [
+    {
+      "name": "chrome-devtools-mcp",
+      "repository": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "official": true,
+      "security_risk": "medium",
+      "purpose": "Gives coding agents live Chrome DevTools powers: performance traces, network inspection, console, CPU profiling, debugging of running pages — unique for perf debugging agents.",
+      "path": "knowledge/mcp/registry/chrome-devtools-mcp.yaml"
+    },
+    {
+      "name": "context7",
+      "repository": "https://github.com/upstash/context7",
+      "official": false,
+      "security_risk": "low",
+      "purpose": "Retrieves up-to-date library documentation into agent context — directly fights stale-API hallucination; widely adopted by coding agents.",
+      "path": "knowledge/mcp/registry/context7-mcp.yaml"
+    },
+    {
+      "name": "fetch-mcp",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "official": true,
+      "security_risk": "medium",
+      "purpose": "Fetch URLs and return content as markdown for LLM consumption; robots.txt aware; the base web-reading primitive.",
+      "path": "knowledge/mcp/registry/fetch-mcp.yaml"
+    },
+    {
+      "name": "filesystem-mcp",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "official": true,
+      "security_risk": "medium",
+      "purpose": "Reference filesystem access server: read/write files under configured roots; the canonical pattern for sandboxed file tools.",
+      "path": "knowledge/mcp/registry/filesystem-mcp.yaml"
+    },
+    {
+      "name": "github-mcp-server",
+      "repository": "https://github.com/github/github-mcp-server",
+      "official": true,
+      "security_risk": "medium",
+      "purpose": "Official GitHub MCP: repos, issues, PRs, actions, code scanning, Dependabot alerts; supports toolset grouping and fine-grained tokens; Docker or remote-hosted.",
+      "path": "knowledge/mcp/registry/github-mcp.yaml"
+    },
+    {
+      "name": "memory-mcp",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "official": true,
+      "security_risk": "low",
+      "purpose": "Persistent knowledge-graph memory (entities, relations, observations) over a local file — reference implementation for agent long-term memory.",
+      "path": "knowledge/mcp/registry/memory-mcp.yaml"
+    },
+    {
+      "name": "playwright-mcp",
+      "repository": "https://github.com/microsoft/playwright-mcp",
+      "official": true,
+      "security_risk": "medium",
+      "purpose": "Browser automation for agents via Playwright using the accessibility tree (not screenshots) — fast, deterministic, LLM-friendly page interaction; snapshot-based state; includes agent-oriented integration examples (.claude/skills etc.) in-repo.",
+      "path": "knowledge/mcp/registry/playwright-mcp.yaml"
+    },
+    {
+      "name": "postgres-mcp (community reference)",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "official": false,
+      "security_risk": "medium",
+      "purpose": "Read-only SQL access to Postgres for schema exploration and safe querying.",
+      "path": "knowledge/mcp/registry/postgres-mcp.yaml"
+    },
+    {
+      "name": "sentry-mcp",
+      "repository": "https://github.com/getsentry/sentry-mcp",
+      "official": true,
+      "security_risk": "low",
+      "purpose": "Error/issue triage for agents: pull recent production errors, stack traces, event context into debugging workflows.",
+      "path": "knowledge/mcp/registry/sentry-mcp.yaml"
+    },
+    {
+      "name": "sequential-thinking",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "official": true,
+      "security_risk": "low",
+      "purpose": "Structured dynamic/reflective thought sequences via a tool interface — an explicit public reasoning scaffold for agents (ReAct-style).",
+      "path": "knowledge/mcp/registry/sequential-thinking-mcp.yaml"
+    },
+    {
+      "name": "slack-mcp",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "official": false,
+      "security_risk": "medium",
+      "purpose": "Slack workspace access: channel history, message posting — common human-in-the-loop notification channel for agents.",
+      "path": "knowledge/mcp/registry/slack-mcp.yaml"
+    },
+    {
+      "name": "supabase-mcp",
+      "repository": "https://github.com/supabase/mcp",
+      "official": true,
+      "security_risk": "high",
+      "purpose": "Manage Supabase projects: schema/migrations, SQL execution, auth admin, logs, branch management; destructive tool groups are opt-in via feature flags.",
+      "path": "knowledge/mcp/registry/supabase-mcp.yaml"
+    }
+  ],
+  "agents": [
+    {
+      "name": "architect",
+      "role": "Software architecture agent",
+      "path": "agents/architect/AGENT.md"
+    },
+    {
+      "name": "backend-engineer",
+      "role": "Backend implementation agent",
+      "path": "agents/backend-engineer/AGENT.md"
+    },
+    {
+      "name": "database-engineer",
+      "role": "Database engineering agent",
+      "path": "agents/database-engineer/AGENT.md"
+    },
+    {
+      "name": "fact-checker",
+      "role": "Claim verification agent",
+      "path": "agents/fact-checker/AGENT.md"
+    },
+    {
+      "name": "frontend-engineer",
+      "role": "Frontend implementation agent",
+      "path": "agents/frontend-engineer/AGENT.md"
+    },
+    {
+      "name": "performance-engineer",
+      "role": "Performance engineering agent",
+      "path": "agents/performance-engineer/AGENT.md"
+    },
+    {
+      "name": "qa-engineer",
+      "role": "QA engineering agent",
+      "path": "agents/qa-engineer/AGENT.md"
+    },
+    {
+      "name": "researcher",
+      "role": "Research agent",
+      "path": "agents/researcher/AGENT.md"
+    },
+    {
+      "name": "security-reviewer",
+      "role": "Security review agent",
+      "path": "agents/security-reviewer/AGENT.md"
+    },
+    {
+      "name": "ux-reviewer",
+      "role": "UX review agent",
+      "path": "agents/ux-reviewer/AGENT.md"
+    },
+    {
+      "name": "website-quality-reviewer",
+      "role": "Web project quality review agent",
+      "path": "agents/website-quality-reviewer/AGENT.md"
+    }
+  ],
+  "workflows": [
+    {
+      "name": "analyze-existing-project",
+      "skills": [
+        "repository-analysis",
+        "documentation",
+        "code-review"
+      ],
+      "path": "workflows/analyze-existing-project/WORKFLOW.md"
+    },
+    {
+      "name": "architecture-review",
+      "skills": [
+        "repository-analysis",
+        "code-review",
+        "security-audit"
+      ],
+      "path": "workflows/architecture-review/WORKFLOW.md"
+    },
+    {
+      "name": "bug-investigation",
+      "skills": [
+        "debugging",
+        "testing",
+        "repository-analysis"
+      ],
+      "path": "workflows/bug-investigation/WORKFLOW.md"
+    },
+    {
+      "name": "build-website",
+      "skills": [
+        "project-planning",
+        "research-before-code",
+        "frontend-design",
+        "frontend-implementation",
+        "ai-slop-detection",
+        "testing",
+        "security-audit",
+        "performance-audit",
+        "accessibility-audit",
+        "documentation"
+      ],
+      "path": "workflows/build-website/WORKFLOW.md"
+    },
+    {
+      "name": "performance-review",
+      "skills": [
+        "performance-audit"
+      ],
+      "path": "workflows/performance-review/WORKFLOW.md"
+    },
+    {
+      "name": "release-checklist",
+      "skills": [
+        "testing",
+        "security-audit",
+        "documentation"
+      ],
+      "path": "workflows/release-checklist/WORKFLOW.md"
+    },
+    {
+      "name": "research-before-coding",
+      "skills": [
+        "research-before-code",
+        "web-research",
+        "source-validation",
+        "evidence-validation"
+      ],
+      "path": "workflows/research-before-coding/WORKFLOW.md"
+    },
+    {
+      "name": "security-review",
+      "skills": [
+        "security-audit"
+      ],
+      "path": "workflows/security-review/WORKFLOW.md"
+    }
+  ]
+}

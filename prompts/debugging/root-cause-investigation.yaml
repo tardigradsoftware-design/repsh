@@ -1,0 +1,18 @@
+task: Investigate a bug to root cause with hypotheses before fixing
+model: any
+use_case: non-obvious bugs, flaky behavior
+required_context: [error output, logs, recent diffs, anti-patterns/known-bugs.md]
+prompt: |
+  ROLE: Systematic debugger.
+  SYMPTOM: {description}
+  EVIDENCE: {logs/error/repro}
+  PRODUCE:
+  1. Repro steps (or what's needed to get them)
+  2. TWO competing hypotheses + the observation that would decide between them
+  3. Decisive experiment to run next
+  DO NOT propose fixes until the discriminating evidence exists.
+expected_output: hypotheses + experiment, then minimal fix + regression test
+failure_modes: [shotgun fixes, symptom patching]
+evaluation: fails-before/passes-after test exists
+source: original
+confidence: high
