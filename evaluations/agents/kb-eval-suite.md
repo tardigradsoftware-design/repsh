@@ -41,5 +41,8 @@ Purpose: measure whether THIS knowledge base actually improves agent performance
 Rubric per task (0-2 × dimensions, judge prompt in `prompts/evaluation/`) + human spot-audit ≥20%.
 Report: success rate, time, tokens, defect counts — WITH vs WITHOUT KB, N=3 runs each (variance reported).
 
+## Runs
+- **PILOT executed 2026-09-20** — 4 tasks (006/016/011/013), baseline vs KB: mean 10.25 → 16.0 /16. Self-scored, N=1 — directional only. Full methodology + limitations: `results/2026-09-20-pilot/`.
+
 ## Success criterion
 KB-mounted runs show statistically meaningful improvement on knowledge-dependent tasks (006/008/013/016/019/020) without slowing trivial tasks. If not: the KB is decoration — fix the KB, not the metric.

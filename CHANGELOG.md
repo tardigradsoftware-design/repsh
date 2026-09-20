@@ -23,6 +23,17 @@ All notable changes to this knowledge base. Format: Added / Updated / Deprecated
 - Copy policy + license intelligence enforced; secret-pattern scanning in CI; MCP security schema mandatory.
 - Public-research-only policy for reasoning/model internals codified in AGENTS.md.
 
+## [1.1.0] — 2026-09-20 (PHASE 14 executed + case studies)
+
+### Added
+- PILOT run of the KB evaluation suite executed: 4 tasks, baseline (no-KB) vs KB retrieval flow — mean 10.25 → 16.0/16 (self-scored, N=1, directional). Results: evaluations/agents/results/2026-09-20-pilot/.
+- 3 production case studies (verified public sources): Anthropic multi-agent research system, Manus context engineering, GitHub Copilot codebase RAG.
+- Knowledge notes: multi-agent patterns (orchestrator-worker economics, when-NOT), computer-use agents (decision ladder + machine-keys security), observability & CI for AI apps, misc area policy.
+- context-packing.md: KV-cache-first ordering principle promoted from Manus case study.
+
+### Changed
+- Suite file links its pilot results; case-studies README now a real index.
+
 ## [1.0.1] — 2026-09-20 (prompt-compliance audit)
 
 ### Added

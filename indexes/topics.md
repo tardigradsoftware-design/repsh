@@ -1,5 +1,5 @@
 # Topics Index
-Auto-generated 2026-09-20. 28 knowledge areas, 40 notes.
+Auto-generated 2026-09-20. 28 knowledge areas, 44 notes.
 
 Start here to find domain knowledge. Each area folder holds dated, confidence-labeled notes.
 
@@ -11,7 +11,7 @@ Start here to find domain knowledge. Each area folder holds dated, confidence-la
 - **backend** (1 notes) — `knowledge/backend/`
 - **browser-automation** (1 notes) — `knowledge/browser-automation/`
 - **coding** (1 notes) — `knowledge/coding/`
-- **computer-use** (0 notes) — `knowledge/computer-use/`
+- **computer-use** (1 notes) — `knowledge/computer-use/`
 - **context-engineering** (2 notes) — `knowledge/context-engineering/`
 - **data-engineering** (1 notes) — `knowledge/data-engineering/`
 - **databases** (4 notes) — `knowledge/databases/`
@@ -19,10 +19,10 @@ Start here to find domain knowledge. Each area folder holds dated, confidence-la
 - **devops** (1 notes) — `knowledge/devops/`
 - **evaluation** (1 notes) — `knowledge/evaluation/`
 - **frontend** (3 notes) — `knowledge/frontend/`
-- **infrastructure** (0 notes) — `knowledge/infrastructure/`
+- **infrastructure** (1 notes) — `knowledge/infrastructure/`
 - **mcp** (1 notes) — `knowledge/mcp/`
-- **misc** (0 notes) — `knowledge/misc/`
-- **multi-agent** (0 notes) — `knowledge/multi-agent/`
+- **misc** (1 notes) — `knowledge/misc/`
+- **multi-agent** (1 notes) — `knowledge/multi-agent/`
 - **performance** (1 notes) — `knowledge/performance/`
 - **prompt-engineering** (1 notes) — `knowledge/prompt-engineering/`
 - **reasoning** (1 notes) — `knowledge/reasoning/`

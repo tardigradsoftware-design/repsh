@@ -20,6 +20,7 @@ Design the context assembly order for agents. Goal: the model acts on the right 
 5. **Recent state:** last actions/results, errors to avoid repeating
 
 ## Principles
+- **Cache-first ordering (production-validated — case-studies/manus-context-engineering.md):** stable prefix first (identity/rules NEVER carry timestamps), append-only context, deterministic serialization. Cache hits cost ~1/10 of input tokens; prefix churn is the dominant hidden cost bug.
 - Relevance beats completeness: measure what the model USES (utilization check); cut dead weight.
 - Critical constraints repeated at the end for long contexts (recency effect).
 - Compression: extractive excerpts for facts (summaries lose specifics); summaries for orientation only.
