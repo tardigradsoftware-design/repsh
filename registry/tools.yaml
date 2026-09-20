@@ -1,0 +1,162 @@
+# Geliştirme araçları ve servisleri.
+# Şema: schemas/repository-entry.schema.json
+
+- id: vscode
+  title: Visual Studio Code
+  type: tool
+  url: https://code.visualstudio.com/
+  owner: Microsoft
+  license: MIT (Code - OSS), proprietary (resmi build)
+  status: ACTIVE
+  summary: Hafif, genişletilebilir kod editörü.
+  confidence: very-high
+  evidence_level: FACT
+  tags: [editor, ide, microsoft]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://code.visualstudio.com/
+
+- id: cursor
+  title: Cursor
+  type: tool
+  url: https://cursor.com/
+  owner: Cursor Inc.
+  license: proprietary
+  status: ACTIVE
+  summary: AI-first kod editörü (VS Code fork'u). Composer, Tab, Agent mode.
+  confidence: medium
+  evidence_level: RECOMMENDATION
+  tags: [editor, ai, ide]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://cursor.com/
+
+- id: vercel-platform
+  title: Vercel (hosting platform)
+  type: service
+  url: https://vercel.com/
+  owner: Vercel
+  license: proprietary
+  status: ACTIVE
+  summary: Next.js öncelikli, edge/global deployment platformu; preview branch'ler, Analytics, Speed Insights.
+  confidence: very-high
+  evidence_level: RECOMMENDATION
+  tags: [hosting, deployment, paas, serverless, edge]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://vercel.com/
+
+- id: cloudflare
+  title: Cloudflare (CDN, Workers, Pages, R2, D1)
+  type: service
+  url: https://www.cloudflare.com/
+  owner: Cloudflare
+  license: proprietary
+  status: ACTIVE
+  summary: Global CDN, Workers (V8 isolate edge runtime), Pages, R2 (object storage), D1 (SQLite), WAF.
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [cdn, hosting, edge, serverless, ddos, workers]
+  verified_at: 2026-09-20
+  expires_at: 2027-01-20
+  source_urls:
+    - https://www.cloudflare.com/
+
+- id: lighthouse
+  title: Lighthouse
+  type: tool
+  url: https://github.com/GoogleChrome/lighthouse
+  owner: Google Chrome
+  license: Apache-2.0
+  status: ACTIVE
+  summary: Web sitesi performans, erişilebilirlik, SEO ve PWA denetim aracı (CLI + Chrome DevTools).
+  confidence: very-high
+  evidence_level: FACT
+  tags: [audit, performance, accessibility, seo, pwa]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/GoogleChrome/lighthouse
+
+- id: axe-core
+  title: axe-core
+  type: tool
+  url: https://github.com/dequelabs/axe-core
+  owner: Deque Systems
+  license: MPL-2.0
+  status: ACTIVE
+  summary: JS erişilebilirlik test motoru; Playwright/Jest/Cypress entegrasyonları ile otomatik a11y denetimi.
+  confidence: very-high
+  evidence_level: RECOMMENDATION
+  tags: [accessibility, testing, axe]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://github.com/dequelabs/axe-core
+
+- id: git
+  title: Git
+  type: tool
+  url: https://git-scm.com/
+  owner: Git projes (Linux Foundation çatısı)
+  license: GPL-2.0
+  status: STABLE
+  summary: Dağıtık sürüm kontrol sistemi.
+  confidence: very-high
+  evidence_level: FACT
+  tags: [vcs, git]
+  verified_at: 2026-09-20
+  expires_at: 2028-09-20
+  source_urls:
+    - https://git-scm.com/
+
+- id: gh-cli
+  title: GitHub CLI
+  type: tool
+  url: https://cli.github.com/
+  owner: GitHub
+  license: MIT
+  status: ACTIVE
+  summary: GitHub işlemlerini CLI'dan yapmak için araç (PR, issue, release, api).
+  confidence: very-high
+  evidence_level: FACT
+  tags: [github, cli, devops]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://cli.github.com/
+
+- id: docker
+  title: Docker
+  type: tool
+  url: https://www.docker.com/
+  owner: Docker Inc.
+  license: Apache-2.0 (Motor), proprietary (Docker Desktop)
+  status: ACTIVE
+  summary: Konteynerleştirme platformu.
+  confidence: high
+  evidence_level: FACT
+  tags: [containers, devops, packaging]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://www.docker.com/
+
+- id: bun
+  title: Bun
+  type: tool
+  url: https://bun.sh/
+  owner: Oven
+  license: MIT (runtime çekirdeği için)
+  status: ACTIVE
+  summary: Hızlı JavaScript runtime, paket yöneticisi, test çalıştırıcı ve bundler.
+  confidence: medium
+  evidence_level: RECOMMENDATION
+  tags: [runtime, javascript, bundler, package-manager]
+  verified_at: 2026-09-20
+  expires_at: 2027-01-20
+  source_urls:
+    - https://bun.sh/

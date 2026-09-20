@@ -1,0 +1,50 @@
+name: Validate KB
+
+on:
+  push:
+    branches: [main, 'arena/**']
+  pull_request:
+    branches: [main]
+  schedule:
+    # Haftalık Pazartesi 03:00 UTC — süresi geçen kayıtlar ve kırık link için tarama
+    - cron: '0 3 * * 1'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install js-yaml
+        run: npm install js-yaml --no-save --prefix /tmp
+
+      - name: Run validation script
+        run: node scripts/validate/validate.js
+        env:
+          NODE_PATH: /tmp/node_modules
+
+      - name: Regenerate index and check for drift
+        run: |
+          cp indexes/index.json /tmp/index-before.json
+          node scripts/generate-index/generate-index.js
+          diff indexes/index.json /tmp/index-before.json || {
+            echo "indexes/index.json güncel değil; lütfen 'node scripts/generate-index/generate-index.js' çalıştırıp commit edin.";
+            exit 1;
+          }
+        env:
+          NODE_PATH: /tmp/node_modules
+
+      - name: Secret scan (basit pattern)
+        run: |
+          if grep -rEn "sk-[a-zA-Z0-9]{32,}|AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9_]{36,}|SUPABASE_SERVICE_ROLE_KEY\s*=\s*[A-Za-z0-9._-]{40,}" \
+            --include="*.{js,ts,jsx,tsx,json,yaml,yml,md,env,sh}" \
+            --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.next \
+            --exclude="*.example" --exclude="validate.js" .; then
+            echo "Potential secret found!"; exit 1;
+          fi
+        shell: bash

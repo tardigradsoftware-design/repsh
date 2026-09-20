@@ -1,0 +1,1121 @@
+# Registry: GitHub repoları ve açık kaynak projeler.
+# Şema: schemas/repository-entry.schema.json
+# Her kayıt GitHub API üzerinden 2026-09-20'de doğrulanmıştır.
+
+- id: anthropics-skills
+  title: Anthropic Skills (Claude)
+  type: github-repository
+  url: https://github.com/anthropics/skills
+  owner: anthropics
+  repo: anthropics/skills
+  license: no-license   # README'de Apache-2.0 ve source-available karışımı; LICENSE dosyası YOK
+  status: ACTIVE
+  stars: 177220
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-10
+  summary: |
+    Anthropic'in resmi Claude skills örnekleri. Agent Skills standardına (agentskills.io)
+    uygun SKILL.md formatı, örnek skill'ler (doc-creation, testing, MCP, creative), şablon ve spec içerir.
+  why_useful: |
+    Kendi skill formatımız için referans standart. Olgun skill örnekleri, şablon ve plugin
+    mekanizması görmemizi sağlar; özellikle belgeleme ve test etme becerileri için doğrudan ilham.
+  best_for:
+    - Skill yazım formatı ve şablon
+    - SKILL.md frontmatter standardı
+    - Üretimde kullanılan docx/pdf/pptx/xlsx skill'leri
+  not_for:
+    - Bu repo kendi başına bir CLI/araç değildir
+    - Bazı doc-* skill'leri source-available'dır, açık kaynak değildir
+  limitations: |
+    Tüm skill'ler açık kaynak değil; docx/pdf/pptx/xlsx klasörleri "source-available". LICENSE
+    dosyası repoda bulunmuyor; README içinde Apache-2.0 ve "kaynak mevcut" karışımı belirtilmiş.
+  confidence: high
+  evidence_level: FACT
+  tags: [agents, skills, claude, agent-skills-standard, spec]
+  related: [openai-skills, agentsmd-agents-md, obra-superpowers, voltagent-awesome-agent-skills]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/anthropics/skills
+    - https://raw.githubusercontent.com/anthropics/skills/main/README.md
+
+- id: openai-skills
+  title: OpenAI Agent Skills (Codex)
+  type: github-repository
+  url: https://github.com/openai/skills
+  owner: openai
+  repo: openai/skills
+  license: no-license   # LICENSE dosyası yok
+  status: ARCHIVED      # README'de açıkça "DEPRECATED" yazıyor; github archived=False ama proje deprecated
+  stars: 27492
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-08
+  summary: |
+    OpenAI Codex için skills kataloğu. README'de "Bu repo deprecated" ifadesi bulunur; kullanıcılar
+    openai/plugins reposuna ve Codex plugin kılavuzuna yönlendiriliyor. Agent Skills standardına atıf var.
+  why_useful: |
+    Agent Skills standardı için Anthropic'in yanında ikinci referans; deprecated olduğu için ancak
+    tarihsel/karşılaştırma bağlamında kullanılır.
+  best_for:
+    - Standart karşılaştırması (Anthropic skills vs OpenAI skills)
+    - Codex plugin sistemine geçiş bağlamı
+  not_for:
+    - Aktif skill yazma rehberi (deprecated)
+  limitations: README "DEPRECATED" diyor; yeni projede openai/plugins ve Codex plugin kılavuzu esas alınmalı.
+  confidence: high
+  evidence_level: FACT
+  tags: [agents, skills, codex, openai, deprecated]
+  related: [anthropics-skills, agentsmd-agents-md]
+  verified_at: 2026-09-20
+  expires_at: 2026-10-20
+  source_urls:
+    - https://github.com/openai/skills
+    - https://raw.githubusercontent.com/openai/skills/main/README.md
+
+- id: agentsmd-agents-md
+  title: agents.md — Agent instructions standard
+  type: github-repository
+  url: https://github.com/agentsmd/agents.md
+  owner: agentsmd
+  repo: agentsmd/agents.md
+  license: MIT
+  status: ACTIVE
+  stars: 24495
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-10
+  summary: |
+    AGENTS.md (CLAUDE.md benzeri) dosyaları için topluluk standardı ve örnekler. Repo üzerinde
+    çalışan ajanların uyması gereken talimat formatı ve örnek AGENTS.md dosyaları içerir.
+  why_useful: |
+    Kendi AGENTS.md'miz için topluluk standardını referans almak; diğer projelere koyacağımız
+    "nasıl KB kullanılır" bloğunun biçimini belirlemek için.
+  best_for: [AGENTS.md formatı, ajan talimatları topluluk örnekleri]
+  not_for: [Kod kütüphanesi, çalıştırılabilir araç]
+  confidence: high
+  evidence_level: FACT
+  tags: [agents, agents-md, standards, prompt-engineering]
+  related: [anthropics-skills]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/agentsmd/agents.md
+
+- id: obra-superpowers
+  title: Superpowers — Claude Code skill system & agent framework
+  type: github-repository
+  url: https://github.com/obra/superpowers
+  owner: obra
+  repo: obra/superpowers
+  license: MIT
+  status: ACTIVE
+  stars: 288946
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-19
+  latest_release: v6.4.1
+  summary: |
+    Claude Code için kapsamlı yetenek/skill seti; kod araştırma, yazma, hata ayıklama, TDD,
+    mimari tartışma gibi konularda hazır talimatlar ve araçlar. Yüksek benimsenme, aktif bakım.
+  why_useful: |
+    Web geliştirme ve kod-kalitesi odaklı olgun skill örnekleri; özellikle research, TDD ve
+    debugging akışları için yapıcı ilham. Kopyalamadan ilke çıkarmak için zengin bir kaynak.
+  best_for:
+    - Kod kalitesi ve test odaklı akışlar için ilham
+    - Claude Code plugin/skill yapısı
+    - TDD ve refactoring talimat örnekleri
+  not_for:
+    - Birebir kullanım için (bizim bağlamımız Türkiye/web'e özgü)
+    - Hazır komut dosyaları (bazen çok kapsamlı, kendi akışımıza uymayabilir)
+  limitations: |
+    Hızlı gelişiyor; bir sürüme bağlanmak gerekir. Birçok özellik Claude Code internals'ına
+    sıkı bağlı, genel ajan çerçevelerine çevirirken özen ister.
+  confidence: high
+  evidence_level: FACT
+  tags: [agents, claude-code, skills, tdd, debugging, code-quality]
+  related: [anthropics-skills]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/obra/superpowers
+
+- id: voltagent-awesome-agent-skills
+  title: Awesome Agent Skills (küratörlü liste)
+  type: github-repository
+  url: https://github.com/VoltAgent/awesome-agent-skills
+  owner: VoltAgent
+  repo: VoltAgent/awesome-agent-skills
+  license: MIT
+  status: ACTIVE
+  stars: 34625
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-15
+  summary: |
+    Çeşitli ajan sistemleri (Claude Code, Codex, Cursor, Copilot, Gemini) için kategorilere
+    ayrılmış skill ve plugin listesi. Güncel kalması için topluluk katkılarıyla sürdürülüyor.
+  why_useful: |
+    Tek bir yerden yeni MCP/skill/plugin ekosistemini taramak; trendleri ve yeni araçları keşfetmek için.
+  best_for:
+    - Keşif ve tarama
+    - Yeni araç/skill bulma
+  not_for:
+    - Doğrudan rehber / öğretici (bir link listesidir)
+    - Kalite garantisi (awesome-list ortalama sorunu)
+  limitations: Liste kapsamlı ama her kaydın doğrulanması gerekiyor; yıldızlar ve popülerlik tek başına ölçüt değil.
+  confidence: medium
+  evidence_level: RECOMMENDATION
+  tags: [awesome-list, agents, skills, mcp, plugins, discovery]
+  related: [hesreallyhim-awesome-claude-code]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/VoltAgent/awesome-agent-skills
+
+- id: hesreallyhim-awesome-claude-code
+  title: Awesome Claude Code
+  type: github-repository
+  url: https://github.com/hesreallyhim/awesome-claude-code
+  owner: hesreallyhim
+  repo: hesreallyhim/awesome-claude-code
+  license: NOASSERTION   # LICENSE dosyası yok; topluluk listesi
+  status: ACTIVE
+  stars: 54332
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-20
+  summary: |
+    Claude Code için MCP sunucuları, skill'ler, temalar, komutlar ve entegrasyonların küratörlü listesi.
+  why_useful: Claude Code ekosistemini takip için; özellikle MCP keşfi yaparken taranacak kaynak.
+  best_for: [Claude Code ekosistemi keşfi, MCP sunucusu taraması]
+  not_for: [Doğrudan öğretici, kalite onayı]
+  confidence: medium
+  evidence_level: RECOMMENDATION
+  tags: [awesome-list, claude-code, mcp, skills]
+  related: [voltagent-awesome-agent-skills, modelcontextprotocol-servers]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/hesreallyhim/awesome-claude-code
+
+# ==================== AGENT FRAMEWORKS ====================
+
+- id: langgraph
+  title: LangGraph
+  type: github-repository
+  url: https://github.com/langchain-ai/langgraph
+  owner: langchain-ai
+  repo: langchain-ai/langgraph
+  license: MIT
+  status: ACTIVE
+  stars: 41987
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-20
+  latest_release: sdk==0.4.4
+  summary: |
+    LangChain ekosisteminin düşük-seviyeli ajan orkestrasyon kütüphanesi. Durum makineleri,
+    döngüler, insan-in-the-loop, çoklu ajan akışları, kalıcılık (checkpoint) için API sağlar.
+  why_useful: |
+    Karmaşık, çoklu adımlı / dallanmalı ajan akışlarını (örn. araştırma → yazma → test → düzelt
+    döngüleri) kodlamak için olgun seçenek. Bizim repo öncelikli olarak skill/playbook ile
+    süreç tanımladığından LangGraph ikincildir; ajan otomasyonu gerekirse değerlendirilir.
+  best_for: [Çok-adımlı ajan akışları, durable execution, insan-onaylı otomasyon]
+  not_for: [Basit RAG / sohbet botu (fazla karmaşık), web stack'in kendisi]
+  limitations: LangChain ekosisteminin karmaşıklığı; soyutlama katmanı yüksek. Yanlış kullanıldığında
+    hata ayıklaması zordur. Web frontend işi için fazla ağırdır.
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [agents, orchestration, python, typescript, state-machine]
+  related: [pydantic-ai, microsoft-agent-framework, microsoft-autogen]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/langchain-ai/langgraph
+
+- id: pydantic-ai
+  title: Pydantic AI
+  type: github-repository
+  url: https://github.com/pydantic/pydantic-ai
+  owner: pydantic
+  repo: pydantic/pydantic-ai
+  license: MIT
+  status: ACTIVE
+  stars: 20066
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-19
+  latest_release: v2.46.0
+  summary: |
+    Pydantic ekibinin Python ajan çerçevesi. Güçlü tip güvenliği, structured output, dependency
+    injection, Logfire ile gözlenebilirlik, birden fazla LLM sağlayıcı desteği.
+  why_useful: |
+    Python tabanlı ajan otomasyonu (örn. research, test, doğrulama scriptleri) için temiz ve
+    tip-güvenli seçenek. Pydantic ekibi tarafından yazıldığı için veri doğrulama entegrasyonu iyi.
+  best_for: [Python ajanları, yapılandırılmış çıktı, doğrulama script'leri]
+  not_for: [Frontend web kodu, tarayıcı içi kullanım]
+  limitations: Nispeten genç (1.x+ aşamasına yeni gelmiş). Ekosistem LangChain kadar geniş değil.
+  confidence: medium
+  evidence_level: RECOMMENDATION
+  tags: [agents, python, pydantic, structured-output]
+  related: [langgraph, microsoft-agent-framework]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/pydantic/pydantic-ai
+    - https://ai.pydantic.dev/
+
+- id: microsoft-agent-framework
+  title: Microsoft Agent Framework (MAF)
+  type: github-repository
+  url: https://github.com/microsoft/agent-framework
+  owner: microsoft
+  repo: microsoft/agent-framework
+  license: MIT
+  status: ACTIVE
+  stars: 13604
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-18
+  latest_release: dotnet-1.22.0
+  summary: |
+    Microsoft'un AutoGen'in kurumsal halefi olan ajan çerçevesi. Kararlı 1.0 sürümü mevcut;
+    .NET ve Python desteği, A2A (Agent-to-Agent) ve MCP entegrasyonu, çoklu sağlayıcı model
+    desteği içerir. AutoGen bakım moduna alınınca yeni kullanıcılar buraya yönlendiriliyor.
+  why_useful: |
+    Kurumsal çoklu-ajan sistemler için Microsoft'un resmi yönü; uzun vadeli destek taahhüdü var.
+    Web projeleri için birincil ihtiyaç değil; ancak ileride enterprise entegrasyon gerekirse
+    bakılması gereken seçenek.
+  best_for: [Enterprise çoklu-ajan orkestrasyon, .NET/Python karışık ekipler]
+  not_for: [Hızlı başlangıç / küçük projeler, JavaScript öncelikli stack]
+  limitations: Yeni ekosistem; topluluk ve üçüncü parti entegrasyonlar hâlâ olgunlaşıyor.
+  confidence: medium
+  evidence_level: RECOMMENDATION
+  tags: [agents, enterprise, microsoft, dotnet, python, autogen-successor]
+  related: [microsoft-autogen]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/microsoft/agent-framework
+    - https://learn.microsoft.com/en-us/agent-framework/
+
+- id: microsoft-autogen
+  title: Microsoft AutoGen
+  type: github-repository
+  url: https://github.com/microsoft/autogen
+  owner: microsoft
+  repo: microsoft/autogen
+  license: CC-BY-4.0   # Kod MIT, doküman CC-BY; repodaki ana license CC-BY-4.0 görünüyor
+  status: MAINTENANCE
+  stars: 61070
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-04-15    # Son gerçek kod commit 2026-04-06 (maintenance banner)
+  latest_release: python-v0.7.5
+  summary: |
+    Çoklu-ajan konuşma çerçevesi. Microsoft tarafından bakım moduna alındı (maintenance mode
+    banner'ı mevcut). Yeni özellik gelmiyor; yeni kullanıcılar Microsoft Agent Framework'e
+    yönlendiriliyor.
+  why_useful: |
+    Tarihsel önemi var ve çok sayıda örnek/toolkitten oluşan bir miras; ancak yeni projede
+    başlangıç noktası olarak kullanılmamalı. Mevcut AutoGen kullanan projelerde bakım bilgisi
+    için referans tutulabilir.
+  best_for: [Mevcut AutoGen projelerini anlama, geçiş planı hazırlama]
+  not_for: [Yeni proje başlatmak, production yeni özellik]
+  limitations: Aktif geliştirme yok; yeni feature ve güvenlik yamaları sınırlı.
+  confidence: high
+  evidence_level: FACT
+  tags: [agents, multi-agent, microsoft, maintenance-mode]
+  related: [microsoft-agent-framework]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/microsoft/autogen
+    - https://raw.githubusercontent.com/microsoft/autogen/main/README.md
+
+# ==================== BROWSER AUTOMATION / TESTING ====================
+
+- id: playwright
+  title: Playwright
+  type: github-repository
+  url: https://github.com/microsoft/playwright
+  owner: microsoft
+  repo: microsoft/playwright
+  license: Apache-2.0
+  status: ACTIVE
+  stars: 96387
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-20
+  latest_release: v1.63.0
+  summary: |
+    Microsoft'un tarayıcı otomasyon ve uçtan uca test çerçevesi. Chromium, Firefox, WebKit
+    desteği; otomatik bekleme, kod üretici, trace viewer, görsel karşılaştırma, ağ izleme,
+    erişilebilirlik testi, çoklu tarayıcı/viewport matrisi.
+  why_useful: |
+    Bizim birincil uçtan uca test ve görsel regresyon aracımız. Skill ve playbook'larda
+    tarayıcı testi denildiğinde varsayılan seçenek Playwright'tır.
+  best_for: [E2E test, görsel regresyon, etkileşim testi, erişilebilirlik denetimi, çoklu tarayıcı]
+  not_for: [Birim test (Vitest/Jest kullan), yük testi (k6/locust kullan)]
+  limitations: Webkit desteği Linux'ta tam değil (bazı font/render farkları). CI'da kurulum alanı
+    (~400 MB). Mobil native için uygun değil.
+  confidence: very-high
+  evidence_level: FACT
+  tags: [testing, e2e, browser-automation, cross-browser, visual-regression, accessibility]
+  related: [playwright-mcp]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/microsoft/playwright
+    - https://playwright.dev/
+
+- id: playwright-mcp
+  title: Playwright MCP Server
+  type: github-repository
+  url: https://github.com/microsoft/playwright-mcp
+  owner: microsoft
+  repo: microsoft/playwright-mcp
+  license: Apache-2.0
+  status: ACTIVE
+  stars: 37370
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-18
+  latest_release: v0.0.82
+  summary: |
+    Playwright'ı MCP (Model Context Protocol) sunucusu olarak kullanıma sunan resmi paket.
+    AI ajanının gerçek bir tarayıcıyı kontrol ederek sayfaları gezinmesi, form doldurması,
+    ekran görüntüsü alması, test çalıştırması, snapshot ve erişilebilirlik ağacı alması sağlanır.
+  why_useful: |
+    Ajanların uygulamayı gerçekten görüp test etmesi için kritik MCP. browser-testing ve
+    website-quality-review skill'lerimizin temel aracı.
+  best_for: [AI-tarayıcı etkileşimi, canlı site doğrulama, screenshot, accessibility tree]
+  not_for: [Production tarayıcı otomasyonu altyapısı (doğrudan Playwright kullan)]
+  limitations: MCP aracı olarak yüksek izin ister (tarayıcı kontrolü, ağı görme); güvenlik ayarı
+    yapılmadan güvenilmeyen sayfalara yönlendirilmemeli.
+  confidence: high
+  evidence_level: FACT
+  tags: [mcp, browser-automation, testing, playwright, ai-agent]
+  related: [playwright, modelcontextprotocol-servers, browser-use]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/microsoft/playwright-mcp
+
+- id: browser-use
+  title: browser-use
+  type: github-repository
+  url: https://github.com/browser-use/browser-use
+  owner: browser-use
+  repo: browser-use/browser-use
+  license: MIT
+  status: ACTIVE
+  stars: 115411
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-18
+  latest_release: 0.13.10
+  summary: |
+    LLM güdümlü web otomasyon kütüphanesi (Python). Sayfayı görsel + DOM olarak algılayan ajanlar
+    oluşturmak için; Playwright tabanlı, vision modeli entegrasyonu, çoklu sekme desteği.
+  why_useful: |
+    Karmaşık web otomasyonu ve form/veri çekme görevlerinde Playwright MCP'ye alternatif.
+    Özellikle birden fazla siteyi dolaşarak araştırma yapma işleri için.
+  best_for: [Web araştırma otomasyonu, çoklu adım gezinme, scraping-etik-sınırlar-içinde]
+  not_for: [Kırılgan/scalping botlar (yasal/etik risk), doğrudan sitenin önüne koyma]
+  limitations: Vision modeli kullanırken token maliyeti yüksek; seçiciler kırılgan olabilir; hızlı
+    değişen sitelerde düzenli bakım gerektirir.
+  confidence: medium
+  evidence_level: RECOMMENDATION
+  tags: [browser-automation, agents, python, llm-driven]
+  related: [playwright-mcp]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/browser-use/browser-use
+
+- id: modelcontextprotocol-servers
+  title: Model Context Protocol — resmi sunucu listesi
+  type: github-repository
+  url: https://github.com/modelcontextprotocol/servers
+  owner: modelcontextprotocol
+  repo: modelcontextprotocol/servers
+  license: NOASSERTION    # Ana repo LICENSE.md yok; resmi referans sunucuları
+  status: ACTIVE
+  stars: 90483
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-03
+  latest_release: 2026.8.31
+  summary: |
+    MCP'nin resmi referans sunucuları: filesystem, github, brave-search, slack, postgres,
+    puppeteer, memory, google-drive vb. MCP standardının başlangıç noktası.
+  why_useful: |
+    Hangi MCP sunucularının mevcut olduğunu ve standart izin modelini anlamak için ilk adres.
+    Bizim mcp-servers.yaml kayıtlarımızın çoğu buradan doğrulanır.
+  best_for: [MCP ekosistemi referansı, resmî sunucu örnekleri]
+  not_for: [Üretimde doğrudan kullanım (çoğu örnek amaçlı, production hardening yok)]
+  limitations: Referans sunucular güvenlik/hız açısından production için genellikle sertleştirilmemiş.
+  confidence: high
+  evidence_level: FACT
+  tags: [mcp, reference-servers, protocol, ai-tools]
+  related: [playwright-mcp, supabase-mcp]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/modelcontextprotocol/servers
+    - https://modelcontextprotocol.io/
+
+# ==================== CORE WEB FRAMEWORKS ====================
+
+- id: next-js
+  title: Next.js
+  type: github-repository
+  url: https://github.com/vercel/next.js
+  owner: vercel
+  repo: vercel/next.js
+  license: MIT
+  status: ACTIVE
+  stars: 142389
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-20
+  latest_release: v16.3.5
+  summary: |
+    Vercel'in React meta-framework'ü. App Router, RSC (React Server Components), Server Actions,
+    route handlers, ISR/SSR/SSG, image/script/font optimizasyonu, built-in SEO ve performans
+    iyileştirmeleri ile tam-stack React uygulamaları için baskın seçenek.
+  why_useful: |
+    Pazarlama siteleri, dashboard, e-ticaret dahil çoğu web projemiz için varsayılan framework.
+    Türkiye'de hosting maliyet/performans dengesi iyi; Vercel/Cloudflare üzerinde olgun dağıtım.
+  best_for:
+    - Üretim seviyesinde React siteler (pazarlama, dashboard, e-ticaret)
+    - SEO + etkileşim dengesi gerektiren projeler
+    - Tam-stack (frontend + server action + API route) ihtiyaçları
+  not_for:
+    - Çok hafif statik siteler (plain HTML/CSS veya Astro daha uygun)
+    - Backend-only servisler
+  limitations: App Router karmaşıklığı; RSC ile çalışırken bazı kütüphaneler uyumsuz; Vercel'de
+    çalıştırmak en iyi deneyim, kendi sunucunuzda çalıştırmak ek iş ister.
+  confidence: very-high
+  evidence_level: RECOMMENDATION
+  tags: [react, framework, meta-framework, fullstack, vercel, app-router, ssr]
+  related: [react, tailwindcss, shadcn-ui, supabase, vercel-ai, astro, remix, sveltekit, nuxt]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/vercel/next.js
+    - https://nextjs.org/docs
+
+- id: react
+  title: React
+  type: github-repository
+  url: https://github.com/facebook/react
+  owner: facebook
+  repo: facebook/react
+  license: MIT
+  status: ACTIVE
+  stars: 250607
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-18
+  latest_release: v19.3.0
+  summary: |
+    Meta'nın kullanıcı arayüzü kütüphanesi. Modern web uygulamalarının en yaygın temel taşı;
+    fonksiyonel bileşenler, hooks, Server Components ekosistemi Next.js ile.
+  why_useful: Web projelerimizin birincil UI katmanı.
+  best_for: [İnteraktif web UI, SPAs, meta-framework tabanlı uygulamalar]
+  not_for: [Belge-heavy statik siteler (Astro iyi alternatif)]
+  confidence: very-high
+  evidence_level: FACT
+  tags: [react, ui-library, meta]
+  related: [next-js]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/facebook/react
+    - https://react.dev/
+
+- id: tailwindcss
+  title: Tailwind CSS
+  type: github-repository
+  url: https://github.com/tailwindlabs/tailwindcss
+  owner: tailwindlabs
+  repo: tailwindlabs/tailwindcss
+  license: MIT
+  status: ACTIVE
+  stars: 97636
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-08
+  latest_release: v4.3.3
+  summary: |
+    Yardımcı-sınıf tabanlı CSS framework'ü. Utility-first yaklaşımı ile bileşen başına özel CSS
+    yazmadan tutarlı tasarım; v4 ile CSS-first konfigürasyon ve daha hızlı derleme.
+  why_useful: |
+    Tasarım sistemi token'larını uygulamak ve AI ajanlarının da tutarlı UI çıkarması için en
+    uygun yapı (ajanlar sınıf isimleriyle çalışırken çıktı tahmin edilebilir).
+  best_for: [Hızlı ve tutarlı UI geliştirme, bileşen kütüphaneleri, tasarım sistemi]
+  not_for: [İçerik ağırlıklı döküman siteleri (çok sınıf kalabalığı yaratabilir)]
+  limitations: Fazla sınıf sayesinde HTML kalabalıklaşabilir; doğru tema/design-system
+    kurulmazsa görsel tutarsızlık riski vardır (AI-slop için de zemin hazırlar).
+  confidence: very-high
+  evidence_level: RECOMMENDATION
+  tags: [css, utility-first, design-system, styling]
+  related: [shadcn-ui, radix-ui]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/tailwindlabs/tailwindcss
+    - https://tailwindcss.com/
+
+- id: shadcn-ui
+  title: shadcn/ui
+  type: github-repository
+  url: https://github.com/shadcn-ui/ui
+  owner: shadcn-ui
+  repo: shadcn-ui/ui
+  license: MIT
+  status: ACTIVE
+  stars: 124221
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-17
+  latest_release: shadcn@4.21.0
+  summary: |
+    Radix UI primitive'leri üzerine kurulu, Tailwind ile stillenmiş, kopyala-yapıştır (copy/paste)
+    bileşen seti. Bileşenler dependency olarak değil, doğrudan projeye kopyalanarak özelleştirilir.
+  why_useful: |
+    Web projelerimizde başlangıç bileşen seti. Erişilebilir, özelleştirilebilir; ama doğrudan
+    shadcn varsayılanını kullanmak AI-slop görüntüsü yaratır — mutlaka özelleştirme ve tasarım
+    sistemi uygulaması gerekir.
+  best_for: [Hızlı başlangıç, erişilebilir temel bileşenler, dashboard UI]
+  not_for: [Hazır tema olarak kullanmak (jenerik görünür), çok markalı/kurumsal tasarım sistemi]
+  limitations: Doğrudan kullanıldığında çok yaygın ve tanınabilir bir görünüm verir ("shadcn look");
+    özelleştirme yapmadan prod'a çıkarmak AI-slop algısı yaratır.
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [react, components, ui-kit, radix, tailwind, copy-paste]
+  related: [tailwindcss, radix-ui, dashboard-ui]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/shadcn-ui/ui
+    - https://ui.shadcn.com/
+
+- id: radix-ui
+  title: Radix UI Primitives
+  type: github-repository
+  url: https://github.com/radix-ui/primitives
+  owner: radix-ui
+  repo: radix-ui/primitives
+  license: MIT
+  status: ACTIVE
+  stars: 19307
+  stars_checked_at: 2026-09-20
+  last_commit: null
+  summary: |
+    Başsız (headless), erişilebilir React UI primitive'leri. Klavye navigasyonu, ARIA, focus
+    yönetimi hazır gelir; stil tamamen geliştiriciye aittir. shadcn/ui'nin temelidir.
+  why_useful: |
+    Erişilebilirlik ve etkileşim davranışlarını sıfırdan yazmamak için; custom tasarım sisteminin
+    alt katmanı olarak.
+  best_for: [Özel tasarım sistemleri, erişilebilir kompozit bileşenler]
+  not_for: [Hazır stil bekleyenler]
+  confidence: very-high
+  evidence_level: RECOMMENDATION
+  tags: [react, headless, accessibility, primitives]
+  related: [shadcn-ui]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/radix-ui/primitives
+    - https://www.radix-ui.com/
+
+- id: astro
+  title: Astro
+  type: github-repository
+  url: https://github.com/withastro/astro
+  owner: withastro
+  repo: withastro/astro
+  license: NOASSERTION
+  status: ACTIVE
+  stars: 62715
+  stars_checked_at: 2026-09-20
+  last_commit: null
+  summary: |
+    İçerik-odaklı, adalar (islands) mimarili web framework. Statik çıktı varsayılan; React/Vue/Svelte
+    bileşenlerini sadece ihtiyaç olan yerde hydrate eder; blog, doküman ve pazarlama siteleri için çok hızlı.
+  why_useful: |
+    Az interaktiflik gerektiren pazarlama siteleri, blog, doküman için Next.js'ten daha hafif bir seçenek.
+  best_for: [İçerik/pazarlama siteleri, blog, dokümantasyon, çok hafif landing page]
+  not_for: [Yoğun interaktif dashboard, karmaşık form akışları]
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [framework, static-site, islands, content-focused]
+  related: [next-js]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/withastro/astro
+    - https://astro.build/
+
+# ==================== BACKEND / DB / BAAS ====================
+
+- id: supabase
+  title: Supabase
+  type: github-repository
+  url: https://github.com/supabase/supabase
+  owner: supabase
+  repo: supabase/supabase
+  license: Apache-2.0
+  status: ACTIVE
+  stars: 110369
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-20
+  latest_release: v1.26.08
+  summary: |
+    Postgres üzerine kurulu açık kaynak Firebase alternatifi. Auth, RLS (Row Level Security),
+    Realtime, Storage, Edge Functions, Vector (pgvector), PostgREST otomatik API sağlar.
+  why_useful: |
+    Küçük-orta ölçekli web projeleri için hızlı backend; dashboard ve e-ticarette auth + DB + depolama
+    üçlüsünü tek yerden sunar. RLS doğru kurulduğunda güvenlidir.
+  best_for: [MVP, startup, dashboard, e-ticaret küçük-orta, RLS gerektiren SaaS]
+  not_for: [Çok yüksek write throughput, karmaşık enterprise veri modeli, muhasebe/ERP transaction ağırlıklı]
+  limitations: Migration ve yerel geliştirme deneyimi hâlâ kırılgan noktalara sahip; RLS politikalarını
+    yanlış kurmak büyük güvenlik açıkları yaratır; Edge Functions soğuk başlangıç süresi yüksek.
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [baas, postgres, auth, rls, realtime, storage, serverless]
+  related: [supabase-mcp, prisma, drizzle-orm]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/supabase/supabase
+    - https://supabase.com/docs
+
+- id: supabase-mcp
+  title: Supabase MCP Server
+  type: github-repository
+  url: https://github.com/supabase/mcp
+  owner: supabase
+  repo: supabase/mcp
+  license: Apache-2.0
+  status: ACTIVE
+  stars: 2915
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-19
+  latest_release: mcp-server-supabase-v0.13.0
+  summary: |
+    Resmi Supabase MCP sunucusu. Yönetim API'si, SQL çalıştırma, migration, veri okuma/yazma,
+    log ve proje yönetimini ajanlara açar.
+  why_useful: |
+    Ajanın Supabase projesini yönetmesi (migration yazma, RLS debug, veri çekme) için güvenli
+    bir yol sağlar — doğrudan veritabanı erişiminden daha dar kapsamlı.
+  best_for: [Supabase projelerinde AI destekli DB yönetimi ve debug]
+  not_for: [Tam yetkili veritabanı işlemleri, migration çalıştırma production'da]
+  limitations: Yanlış izin verilirse production veritabanında değişiklik yapabilir; güvenlik profili
+    dikkatle ayarlanmalı.
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [mcp, supabase, database, postgres]
+  related: [supabase, modelcontextprotocol-servers]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/supabase/mcp
+
+- id: prisma
+  title: Prisma ORM
+  type: github-repository
+  url: https://github.com/prisma/prisma
+  owner: prisma
+  repo: prisma/prisma
+  license: Apache-2.0
+  status: ACTIVE
+  stars: 47638
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-18
+  latest_release: v0.17.0
+  summary: |
+    Tip-güvenli TypeScript/ORM. Schema tabanlı tanım, migration, type-safe client.
+  why_useful: |
+    Next.js + Postgres/Supabase kombinasyonunda olgun ve belgelenmiş ORM; uzun zamandır topluluk
+    tarafından benimsenmiş.
+  best_for: [İlişkisel veritabanı olan çoğu TS/Node projesi]
+  not_for: [Edge runtime (Prisma Client edge desteği sınırlı), çok yoğun write]
+  limitations: v0.x serisinde olmasına rağmen production'da çok kullanılıyor; şema oluşturma ve
+    migration yönetimi yeni başlayana karmaşık gelebilir; Drizzle'a göre daha ağır bir soyutlama.
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [orm, typescript, postgresql, prisma]
+  related: [drizzle-orm, supabase]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/prisma/prisma
+    - https://www.prisma.io/
+
+- id: drizzle-orm
+  title: Drizzle ORM
+  type: github-repository
+  url: https://github.com/drizzle-team/drizzle-orm
+  owner: drizzle-team
+  repo: drizzle-team/drizzle-orm
+  license: Apache-2.0
+  status: ACTIVE
+  stars: 35834
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-20
+  latest_release: 0.45.2
+  summary: |
+    Hafif, SQL-benzeri, tip-güvenli TypeScript ORM. Prisma'ya göre daha düşük soyutlama, SQL'e yakın
+    sözdizimi, edge-friendly, küçük bundle.
+  why_useful: |
+    Edge/Serverless runtime'da (Vercel Edge, Cloudflare Workers) çalışması ve tip güveninin
+    güçlü olması nedeniyle modern Next.js projeleri için Prisma'ya güçlü alternatif.
+  best_for: [Edge/Serverless, SQL hakimiyeti olan ekipler, yüksek performans sorguları]
+  not_for: [Tam bir migration framework ve GUI bekleyenler (Drizzle Kit var ama olgunluk tartışılır)]
+  limitations: Ekosistem ve topluluk Prisma kadar geniş değil; bazı ilişki senaryolarında elle SQL
+    yazmak gerekiyor.
+  confidence: medium
+  evidence_level: RECOMMENDATION
+  tags: [orm, typescript, sql, edge, lightweight]
+  related: [prisma]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/drizzle-team/drizzle-orm
+    - https://orm.drizzle.team/
+
+# ==================== EVALUATION BENCHMARKS ====================
+
+- id: lm-evaluation-harness
+  title: EleutherAI lm-evaluation-harness
+  type: github-repository
+  url: https://github.com/EleutherAI/lm-evaluation-harness
+  owner: EleutherAI
+  repo: EleutherAI/lm-evaluation-harness
+  license: MIT
+  status: ACTIVE
+  stars: 14032
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-14
+  latest_release: v0.4.13
+  summary: |
+    Geniş dil modelleri için standart değerlendirme çerçevesi. Yüzlerce görev (MMLU, HellaSwag, GSM8K,
+    TruthfulQA vb.) tek arayüzden çalıştırılır.
+  why_useful: |
+    Kendi ajan/mimari seçimlerimizi objektif benchmark'larla değerlendirmek istersek; ana işimiz web
+    geliştirme olduğu için ikincil öncelik.
+  best_for: [Model benchmark, model seçimi, objektif karşılaştırma]
+  not_for: [Web kod kalitesi ölçümü (web özel benchmark gerektirir)]
+  limitations: Web geliştirme görevlerini doğrudan temsil etmez; kod benchmark'ları (HumanEval, SWE-bench)
+    ek olarak ele alınmalı.
+  confidence: high
+  evidence_level: FACT
+  tags: [benchmark, evaluation, llm, agents]
+  related: [helm]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://github.com/EleutherAI/lm-evaluation-harness
+
+- id: helm
+  title: Stanford CRFM HELM (Holistic Evaluation of Language Models)
+  type: github-repository
+  url: https://github.com/stanford-crfm/helm
+  owner: stanford-crfm
+  repo: stanford-crfm/helm
+  license: Apache-2.0
+  status: ACTIVE
+  stars: 2915
+  stars_checked_at: 2026-09-20
+  last_commit: 2026-09-01
+  latest_release: v0.5.16
+  summary: |
+    Stanford CRFM'in dil modellerini çok boyutlu değerlendirme projesi. Doğruluk, sağlamlık,
+    adalet, kalibrasyon, zararlılık, önyargı gibi boyutları karşılaştırmalı olarak ölçer.
+  why_useful: |
+    Model seçiminde tek-rakam doğruluğu ötesine bakmak için; özellikle zararlılık ve yanlış bilgi
+    konularında rehber.
+  best_for: [Model karşılaştırma, zararlılık/yanlış bilgi analizi]
+  not_for: [Kod üretimini ölçmek (HELM kod görevleri sınırlı)]
+  confidence: medium
+  evidence_level: RECOMMENDATION
+  tags: [benchmark, evaluation, llm, stanford, safety]
+  related: [lm-evaluation-harness]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://github.com/stanford-crfm/helm
+    - https://crfm.stanford.edu/helm/
+
+# ==================== STATE/FORMS/DATA ====================
+
+- id: tanstack-query
+  title: TanStack Query (React Query)
+  type: github-repository
+  url: https://github.com/tanstack/query
+  owner: tanstack
+  repo: tanstack/query
+  license: MIT
+  status: ACTIVE
+  stars: 50336
+  stars_checked_at: 2026-09-20
+  last_commit: null
+  summary: |
+    İstemci tarafı veri çekme, önbellekleme, senkronizasyon ve arka plan yenileme kütüphanesi.
+    Server state yönetimi için varsayılan çözüm.
+  why_useful: |
+    Dashboard ve e-ticarette liste/filtreleme/veri yenileme için; loading/error/empty durumlarını
+    standartlaştırır.
+  confidence: very-high
+  evidence_level: RECOMMENDATION
+  tags: [react, data-fetching, cache, server-state]
+  related: [tanstack-table, swr]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/tanstack/query
+    - https://tanstack.com/query
+
+- id: tanstack-table
+  title: TanStack Table
+  type: github-repository
+  url: https://github.com/tanstack/table
+  owner: tanstack
+  repo: tanstack/table
+  license: MIT
+  status: ACTIVE
+  stars: 28443
+  stars_checked_at: 2026-09-20
+  last_commit: null
+  summary: |
+    Başsız, çerçeve-agnostik tablo kütüphanesi. Sıralama, filtre, sayfalama, gruplama,
+    sanallaştırma için mantık sağlar, stil kullanıcıya aittir.
+  why_useful: Dashboard ve admin panellerinde veri tablosu ihtiyacı için erişilebilir ve esnek temel.
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [react, table, grid, data-grid, headless]
+  related: [tanstack-query, react-admin, refine]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/tanstack/table
+    - https://tanstack.com/table
+
+- id: react-hook-form
+  title: React Hook Form
+  type: github-repository
+  url: https://github.com/react-hook-form/react-hook-form
+  owner: react-hook-form
+  repo: react-hook-form/react-hook-form
+  license: MIT
+  status: ACTIVE
+  stars: 44866
+  stars_checked_at: 2026-09-20
+  last_commit: null
+  summary: Performanslı, tip-güvenli React form kütüphanesi. Controlled/uncontrolled karışımı,
+    Zod/Yup/Joi ile şema doğrulama entegrasyonu.
+  why_useful: Formların ajanın doğru üretmesi için standart ve tutarlı API.
+  confidence: very-high
+  evidence_level: RECOMMENDATION
+  tags: [react, forms, validation]
+  related: [zod]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/react-hook-form/react-hook-form
+    - https://react-hook-form.com/
+
+- id: zod
+  title: Zod
+  type: github-repository
+  url: https://github.com/colinhacks/zod
+  owner: colinhacks
+  repo: colinhacks/zod
+  license: MIT
+  status: ACTIVE
+  stars: 43977
+  stars_checked_at: 2026-09-20
+  last_commit: null
+  summary: TypeScript-first şema doğrulama kütüphanesi. Tip çıkarımı, runtime doğrulama, form/API
+    doğrulama entegrasyonu.
+  confidence: very-high
+  evidence_level: RECOMMENDATION
+  tags: [typescript, validation, schema]
+  related: [react-hook-form]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/colinhacks/zod
+
+# ==================== DASHBOARD / ADMIN ====================
+
+- id: react-admin
+  title: React Admin
+  type: github-repository
+  url: https://github.com/marmelab/react-admin
+  owner: marmelab
+  repo: marmelab/react-admin
+  license: MIT
+  status: ACTIVE
+  stars: 26939
+  stars_checked_at: 2026-09-20
+  last_commit: null
+  summary: |
+    Marmelab'ın olgun admin/dashboard çatısı. CRUD sayfaları, data provider (REST/GraphQL/Supabase
+    dahil), auth provider, i18n, liste/gösterim/düzenleme hazır gelir.
+  why_useful: Hızlı admin paneli / backoffice için; kendi tasarım dilimizle çok özelleştirmek
+    istemiyorsak iyi bir başlangıç.
+  best_for: [Internal tooling, CRUD-heavy backoffice, veri yönetim panelleri]
+  not_for: [Müşteriye dönük premium UI (görüntüsü çok "admin template" kalıyor)]
+  limitations: Varsayılan Material UI tabanlı tema; yüksek özelleştirme için öğrenme eğrisi dik.
+  confidence: medium
+  evidence_level: RECOMMENDATION
+  tags: [react, admin, dashboard, crud]
+  related: [refine, tanstack-table]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/marmelab/react-admin
+    - https://marmelab.com/react-admin/
+
+- id: refine
+  title: Refine
+  type: github-repository
+  url: https://github.com/refinedev/refine
+  owner: refinedev
+  repo: refinedev/refine
+  license: MIT
+  status: ACTIVE
+  stars: 35701
+  stars_checked_at: 2026-09-20
+  last_commit: null
+  summary: |
+    React tabanlı headless internal tool/dashboard çatısı. Next.js/Remix/Vite desteği; birden çok
+    UI kütüphanesi (Ant, MUI, Chakra, shadcn) ve data provider (Supabase, Nest, Strapi vb.)
+    entegrasyonu. React Admin'den daha headless.
+  why_useful: B2B dashboard / iç araçlar için hızlı iskelet; şablonları Türkiye'deki ekipler
+    tarafından da kullanılıyor.
+  best_for: [B2B dashboard, CRM benzeri iç araçlar, hızlı admin paneli]
+  not_for: [Müşteri-facing marketing site]
+  confidence: medium
+  evidence_level: RECOMMENDATION
+  tags: [react, admin, dashboard, b2b, headless]
+  related: [react-admin]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/refinedev/refine
+    - https://refine.dev/
+
+# ==================== ICONS / UI TOOLS ====================
+
+- id: lucide
+  title: Lucide Icons
+  type: github-repository
+  url: https://github.com/lucide-icons/lucide
+  owner: lucide-icons
+  repo: lucide-icons/lucide
+  license: NOASSERTION   # ISC aslında ama GitHub API NOASSERTION döndürdü; dosyada doğrula
+  status: ACTIVE
+  stars: 24616
+  stars_checked_at: 2026-09-20
+  last_commit: null
+  summary: Açık kaynak, tutarlı çizgi tarzda ikon seti. Feather'in devamı; React/Vue/Svelte vb. paketleri var.
+  why_useful: UI'da tek tip ikon; shadcn/ui ile varsayılan gelir.
+  best_for: [Genel UI ikonları]
+  not_for: [Marka/özel illustrasyon]
+  confidence: very-high
+  evidence_level: RECOMMENDATION
+  tags: [icons, react, ui]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://github.com/lucide-icons/lucide
+    - https://lucide.dev/
+
+- id: floating-ui
+  title: Floating UI
+  type: github-repository
+  url: https://github.com/floating-ui/floating-ui
+  owner: floating-ui
+  repo: floating-ui/floating-ui
+  license: MIT
+  status: ACTIVE
+  stars: 32753
+  stars_checked_at: 2026-09-20
+  last_commit: null
+  summary: Tooltip, popover, dropdown, select gibi "yüzen" elemanların konumlandırma motoru.
+  confidence: very-high
+  evidence_level: FACT
+  tags: [ui, positioning, tooltip, popover]
+  related: [radix-ui]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://github.com/floating-ui/floating-ui
+
+# ==================== EKONOMI / ÖDEME (TÜRKIYE) ====================
+
+- id: iyzico-node
+  title: iyzico Node.js SDK
+  type: github-repository
+  url: https://github.com/iyzico/iyzipay-node
+  owner: iyzico
+  repo: iyzico/iyzipay-node
+  license: MIT
+  status: MAINTENANCE
+  stars: 248
+  stars_checked_at: 2026-09-20
+  last_commit: null
+  summary: |
+    Türkiye'nin ödeme sağlayıcılarından iyzico'nun resmi Node.js SDK'sı. 3D Secure, iyzico Checkoutform,
+    iade, abonelik (peşin sıra taksit) API'leri.
+  why_useful: Türkiye e-ticaretinde yaygın kullanılan ödeme seçeneği.
+  best_for: [TR e-ticaret ödeme entegrasyonu]
+  not_for: [Uluslararası ödeme (Stripe daha uygun)]
+  limitations: SDK dokümantasyonu ve TypeScript desteği zayıftır; REST API'yi doğrudan kullanmak çoğu
+    zaman daha güvenilir. Son commit tarihi eskiye dönükse production'da kilitlenme riski.
+  confidence: low
+  evidence_level: RECOMMENDATION
+  tags: [payment, turkey, iyzico, ecommerce, tr]
+  related: [stripe-node]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/iyzico/iyzipay-node
+    - https://docs.iyzico.com/
+
+# ==================== DİĞER ====================
+
+- id: vercel-ai
+  title: Vercel AI SDK
+  type: github-repository
+  url: https://github.com/vercel/ai
+  owner: vercel
+  repo: vercel/ai
+  license: NOASSERTION
+  status: ACTIVE
+  stars: 26857
+  stars_checked_at: 2026-09-20
+  last_commit: null
+  summary: |
+    TypeScript'te AI uygulamaları geliştirmek için SDK. Çoklu model sağlayıcı, streaming, tool
+    use, React hook'ları (useChat, useCompletion), Next.js ile entegrasyon.
+  why_useful: Ürün içine AI chat/öneri/jeneratif özellik eklerken standart seçenek.
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [ai, sdk, typescript, streaming, vercel]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://github.com/vercel/ai
+    - https://sdk.vercel.ai/
+
+- id: typescript
+  title: TypeScript
+  type: github-repository
+  url: https://github.com/microsoft/TypeScript
+  owner: microsoft
+  repo: microsoft/TypeScript
+  license: Apache-2.0
+  status: ACTIVE
+  stars: 111123
+  stars_checked_at: 2026-09-20
+  last_commit: null
+  summary: Microsoft'un JavaScript'e statik tip ekleyen dil derleyicisi.
+  confidence: very-high
+  evidence_level: FACT
+  tags: [typescript, language, javascript]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://github.com/microsoft/TypeScript
+    - https://www.typescriptlang.org/

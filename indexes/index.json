@@ -1,0 +1,224 @@
+{
+  "generated_at": "2026-09-20T13:03:11.853Z",
+  "skills": [
+    {
+      "id": "accessibility-audit",
+      "title": "accessibility-audit",
+      "category": "accessibility",
+      "status": "curated",
+      "description": "Web sitelerini WCAG 2.2 AA hedefiyle erisilebilirlik denetiminden gecirme; otomatik ve manuel kontrol listesi; klavye, ekran okuyucu, kontrast, odak, form, ARIA denetimi."
+    },
+    {
+      "id": "ai-slop-detection",
+      "title": "ai-slop-detection",
+      "category": "quality",
+      "status": "curated",
+      "description": "Uretilmis yapay zeka arayuzlerini (jenerik, ai-slop) tespit et, nedenini acikla, somut duzeltme oner, yeniden yaz ve gozden gecir. Her gorsel cikti uzerinde uygulanir."
+    },
+    {
+      "id": "animation-motion",
+      "title": "animation-motion",
+      "category": "frontend",
+      "status": "curated",
+      "description": "Hareket ve animasyonun ne zaman faydali ne zaman zararli oldugunu ayirt etme; reduced-motion destegi, performans, mobil fallback; amaca hizmet eden, olculu animasyon."
+    },
+    {
+      "id": "api-design",
+      "title": "api-design",
+      "category": "backend",
+      "status": "curated",
+      "description": "REST/Server Action/RPC API tasarimi: tutarli rota yapisi, hata yonetimi, surumlama, dogrulama, rate limit, versiyonlama, idempotency, guvenlik."
+    },
+    {
+      "id": "browser-testing",
+      "title": "browser-testing",
+      "category": "testing",
+      "status": "curated",
+      "description": "Playwright ile E2E, gorsel regresyon, etkilesim, erisilebilirlik, responsive, performans, SEO, guvenlik, tarayici uyumu testlerini otomatiklestirme."
+    },
+    {
+      "id": "code-review",
+      "title": "code-review",
+      "category": "quality",
+      "status": "curated",
+      "description": "Kod inceleme: guvenlik, okunabilirlik, tutarlilik, tip guvenligi, hata yonetimi, test ve mimari acidan PR inceleme."
+    },
+    {
+      "id": "dashboard-ui",
+      "title": "dashboard-ui",
+      "category": "frontend",
+      "status": "curated",
+      "description": "Yonetim paneli/B2B dashboard arayuzleri: tablolar, filtreler, sidebar, formlar, bos/loading/hata durumlari, grafikler, komut paleti, yogun veri arayuzleri ve Turkce arayuz notlari icin is akisi."
+    },
+    {
+      "id": "database-design",
+      "title": "database-design",
+      "category": "database",
+      "status": "curated",
+      "description": "Veri modeli ve iliskisel veritabani tasarimi: tablo, iliski, indeks, RLS, migrasyon, soft delete, audit trail, veri dogrulama."
+    },
+    {
+      "id": "debugging",
+      "title": "debugging",
+      "category": "testing",
+      "status": "curated",
+      "description": "Hatayi yeniden uretme, hipotez kurma, daraltma, bulma, kanitla duzeltme ve regresyon onleme is akisi; herhangi bir hata aninda tetiklenir."
+    },
+    {
+      "id": "deployment",
+      "title": "deployment",
+      "category": "devops",
+      "status": "curated",
+      "description": "Production deployment sureci: ortam degiskenleri, build, onizleme, migrasyon, izleme, rollback, CDN, guvenlik header'lari, HTTPS."
+    },
+    {
+      "id": "design-system",
+      "title": "design-system",
+      "category": "frontend",
+      "status": "curated",
+      "description": "Proje icin token tabanli tutarli tasarim sistemi kurmak; renk, tipografi, spacing, radius, shadow, bileşen API'sini standartlastirmak."
+    },
+    {
+      "id": "ecommerce",
+      "title": "ecommerce",
+      "category": "frontend",
+      "status": "curated",
+      "description": "E-ticaret siteleri icin urun listesi, urun detay, sepet, odeme akisi, stok/siparis modeli, guvenlik, donusum odakli UX, fatura/ERP entegrasyonu kalip ve kontrolleri."
+    },
+    {
+      "id": "frontend-design",
+      "title": "frontend-design",
+      "category": "frontend",
+      "status": "curated",
+      "description": "Web arayuzu tasarlarken tutarlilik, hiyerarsi, okunabilirlik ve profesyonel gorunum icin izlenecek is akisi. Yeni sayfa/bilesen tasarlarken tetiklenir."
+    },
+    {
+      "id": "performance-audit",
+      "title": "performance-audit",
+      "category": "performance",
+      "status": "curated",
+      "description": "Web sitesi performansini Core Web Vitals, bundle boyutu, ag cagrilari, render metrikleri uzerinden denetleme ve somut iyilestirme onerileri."
+    },
+    {
+      "id": "research-before-code",
+      "title": "research-before-code",
+      "category": "workflow",
+      "status": "curated",
+      "description": "Herhangi bir kod yazmaya baslamadan once dogru arastirma yapmak; mevcut kutuphane/pattern/MCP var mi diye bakmak, karsilastirmak, dogrulamak, sonra planlamak. Yeni kod yazdirmadan once tetiklenir."
+    },
+    {
+      "id": "responsive-mobile",
+      "title": "responsive-mobile",
+      "category": "frontend",
+      "status": "curated",
+      "description": "Responsive ve mobil oncelikli tasarim; kirilim noktalarinda (390/768/1024/1440) duzenin bozulmamasini, dokunma hedeflerinin buyuklugunu, mobil UX kalibini saglar."
+    },
+    {
+      "id": "security-audit",
+      "title": "security-audit",
+      "category": "security",
+      "status": "curated",
+      "description": "Guvenlik denetimi: OWASP Top 10, auth/session/JWT/OAuth, RLS, XSS/CSRF/SSRF/SQLi, secret yonetimi, prompt injection ve MCP/ajan guvenligi."
+    },
+    {
+      "id": "seo-audit",
+      "title": "seo-audit",
+      "category": "seo",
+      "status": "curated",
+      "description": "Teknik SEO, Core Web Vitals, yapilandirilmis veri, Turkce/yerel SEO; meta, sitemap, robots, hreflang, canonical, indexleme, icerik optimizasyonu icin denetim."
+    },
+    {
+      "id": "website-quality-review",
+      "title": "website-quality-review",
+      "category": "quality",
+      "status": "curated",
+      "description": "Teslim oncesi butunlesik kalite denetimi: gorsel, UX, mimari, performans, erisilebilirlik, responsive, animasyon, metin, SEO, guvenlik. SKOR + CRITICAL/HIGH/MEDIUM/LOW + Oneriler."
+    }
+  ],
+  "playbooks": [
+    {
+      "id": "build-dashboard",
+      "path": "playbooks/build-dashboard.md"
+    },
+    {
+      "id": "build-ecommerce",
+      "path": "playbooks/build-ecommerce.md"
+    },
+    {
+      "id": "build-website",
+      "path": "playbooks/build-website.md"
+    },
+    {
+      "id": "fix-existing-project",
+      "path": "playbooks/fix-existing-project.md"
+    },
+    {
+      "id": "release-checklist",
+      "path": "playbooks/release-checklist.md"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "auth-flow",
+      "path": "patterns/auth-flow.md"
+    },
+    {
+      "id": "data-table",
+      "path": "patterns/data-table.md"
+    },
+    {
+      "id": "sidebar-layout",
+      "path": "patterns/sidebar-layout.md"
+    },
+    {
+      "id": "theme-tokens",
+      "path": "patterns/theme-tokens.md"
+    }
+  ],
+  "anti_patterns": [
+    {
+      "id": "ai-slop-visuals",
+      "path": "anti-patterns/ai-slop-visuals.md"
+    },
+    {
+      "id": "client-service-role",
+      "path": "anti-patterns/client-service-role.md"
+    },
+    {
+      "id": "client-side-total",
+      "path": "anti-patterns/client-side-total.md"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "nextjs-vs-alternatives",
+      "path": "decisions/nextjs-vs-alternatives.md"
+    },
+    {
+      "id": "prisma-vs-drizzle",
+      "path": "decisions/prisma-vs-drizzle.md"
+    },
+    {
+      "id": "supabase-vs-firebase",
+      "path": "decisions/supabase-vs-firebase.md"
+    },
+    {
+      "id": "vercel-vs-cloudflare",
+      "path": "decisions/vercel-vs-cloudflare.md"
+    }
+  ],
+  "stacks": [
+    {
+      "id": "b2b-dashboard",
+      "path": "stacks/b2b-dashboard.md"
+    },
+    {
+      "id": "ecommerce-tr",
+      "path": "stacks/ecommerce-tr.md"
+    },
+    {
+      "id": "marketing-site",
+      "path": "stacks/marketing-site.md"
+    }
+  ]
+}

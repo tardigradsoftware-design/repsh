@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/tardigradsoftware-design/repsh/schemas/mcp-entry.schema.json",
+  "title": "MCP Server Registry Entry",
+  "allOf": [
+    { "$ref": "repository-entry.schema.json" },
+    {
+      "type": "object",
+      "required": ["permissions", "security_risk", "local_or_remote"],
+      "properties": {
+        "permissions": {
+          "type": "object",
+          "properties": {
+            "filesystem_read":  { "type": "boolean", "default": false },
+            "filesystem_write": { "type": "boolean", "default": false },
+            "network_outbound": { "type": "boolean", "default": false },
+            "credential_access": { "type": "boolean", "default": false, "description": "API key, SSH key, cookie vb. erişimi." },
+            "code_execution":   { "type": "boolean", "default": false, "description": "shell/komut çalıştırma." },
+            "browser_control":  { "type": "boolean", "default": false },
+            "database_access":  { "type": "boolean", "default": false }
+          },
+          "additionalProperties": true
+        },
+        "network_access": {
+          "type": "string",
+          "enum": ["none", "local-only", "known-hosts", "any"],
+          "default": "none"
+        },
+        "credential_access": {
+          "type": "string",
+          "enum": ["none", "user-scoped", "system"],
+          "default": "none"
+        },
+        "code_execution": {
+          "type": "string",
+          "enum": ["none", "sandboxed", "host-shell"],
+          "default": "none"
+        },
+        "security_risk": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "critical"],
+          "description": "İzinler ve saldırı yüzeyi değerlendirmesi."
+        },
+        "local_or_remote": {
+          "type": "string",
+          "enum": ["local", "remote", "hybrid"]
+        },
+        "setup_complexity": {
+          "type": "string",
+          "enum": ["trivial", "low", "medium", "high"]
+        },
+        "prompt_injection_surface": {
+          "type": "string",
+          "enum": ["low", "medium", "high"],
+          "description": "Dış içeriğin (web sayfası, DB kaydı) prompta dönme riski."
+        }
+      }
+    }
+  ]
+}

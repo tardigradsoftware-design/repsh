@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/tardigradsoftware-design/repsh/schemas/repository-entry.schema.json",
+  "title": "Registry entry (repository / framework / tool / paper / source)",
+  "type": "object",
+  "required": ["id", "title", "type", "url", "status", "summary", "verified_at"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,80}$",
+      "description": "URL-safe slug; benzersiz."
+    },
+    "title": { "type": "string", "minLength": 2 },
+    "type": {
+      "type": "string",
+      "enum": ["official-docs", "github-repository", "research-paper", "framework", "benchmark", "tool", "blog", "mcp", "standard", "guide", "package", "service"]
+    },
+    "url": { "type": "string", "format": "uri" },
+    "owner": { "type": "string", "description": "Kurum/kullanıcı adı." },
+    "repo": { "type": "string", "description": "GitHub ise owner/repo formatı." },
+    "license": {
+      "type": "string",
+      "description": "MIT / Apache-2.0 / BSD-3-Clause / GPL-3.0 / AGPL-3.0 / ISC / MPL-2.0 / no-license / unknown / proprietary / source-available"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["ACTIVE", "STABLE", "MAINTENANCE", "ARCHIVED", "EXPERIMENTAL", "ABANDONED", "UNKNOWN"]
+    },
+    "stars": {
+      "type": ["integer", "string"],
+      "description": "GitHub yıldız sayısı; doğrulanmadıysa 'unverified'."
+    },
+    "stars_checked_at": { "type": "string", "format": "date" },
+    "last_commit": { "type": ["string", "null"], "description": "ISO tarih veya null." },
+    "latest_release": { "type": ["string", "null"], "description": "En son sürüm etiketi." },
+    "latest_release_at": { "type": ["string", "null"] },
+    "summary": { "type": "string", "minLength": 20, "maxLength": 600 },
+    "why_useful": { "type": "string", "minLength": 10, "maxLength": 600 },
+    "best_for": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "not_for": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "limitations": { "type": ["string", "null"] },
+    "security_notes": { "type": ["string", "null"] },
+    "confidence": {
+      "type": "string",
+      "enum": ["very-high", "high", "medium", "low", "unverified", "conflicting"],
+      "default": "unverified"
+    },
+    "evidence_level": {
+      "type": "string",
+      "enum": ["FACT", "RECOMMENDATION", "EXPERIMENT", "OPINION", "HYPOTHESIS", "UNKNOWN"],
+      "default": "UNKNOWN"
+    },
+    "tags": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "related": { "type": "array", "items": { "type": "string" }, "default": [], "description": "Diğer kayıt id'leri." },
+    "verified_at": { "type": "string", "format": "date" },
+    "expires_at": { "type": "string", "format": "date" },
+    "source_urls": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" },
+      "description": "Doğrulamada kullanılan birincil kaynaklar."
+    }
+  }
+}

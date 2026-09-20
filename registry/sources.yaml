@@ -1,0 +1,274 @@
+# Resmi referans dokümanlar ve standartlar.
+# Şema: schemas/repository-entry.schema.json
+# Bu dosyadaki kayıtlar öncelikli "authoritative source" olarak kullanılır.
+
+- id: mdn-web-docs
+  title: MDN Web Docs
+  type: official-docs
+  url: https://developer.mozilla.org/
+  owner: Mozilla / Open Web Docs topluluğu
+  license: CC-BY-SA-2.5
+  status: ACTIVE
+  summary: |
+    Web teknolojileri (HTML, CSS, JavaScript, HTTP, Web API, erişilebilirlik) için topluluk
+    tarafından sürdürülen, en güvenilir referans dokümantasyon.
+  why_useful: Tarayıcı uyumu, API imzası, söz dizimi ve web standartları konularında birincil kaynak.
+  best_for: [Web API referansı, HTML/CSS/JS söz dizimi, tarayıcı uyum tabloları]
+  not_for: [Framework özgü dokümantasyon, pazarlama/benchmark]
+  confidence: very-high
+  evidence_level: FACT
+  tags: [web, reference, standards, documentation, javascript, html, css]
+  verified_at: 2026-09-20
+  expires_at: 2027-09-20
+  source_urls:
+    - https://developer.mozilla.org/
+
+- id: web-dev
+  title: web.dev (Google)
+  type: official-docs
+  url: https://web.dev/
+  owner: Google
+  license: proprietary   # İçerik Google'a ait; CC benzeri yeniden kullanım koşulları
+  status: ACTIVE
+  summary: |
+    Google'ın web geliştiricilere yönelik kaynağı. Core Web Vitals, performans, PWA, erişilebilirlik,
+    SEO rehberleri; Lighthouse entegrasyonu.
+  why_useful: Performans metrikleri (LCP, INP, CLS) ve SEO/erişilebilirlik için Google'ın bakış açısı;
+    audit skill'lerimiz için referans.
+  best_for: [Core Web Vitals, Lighthouse rehberi, performans, PWA]
+  not_for: [Tarafsız karşılaştırma (Google öncelikli içerik)]
+  confidence: high
+  evidence_level: FACT
+  tags: [web, performance, core-web-vitals, lighthouse, seo, accessibility]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://web.dev/
+
+- id: wcag
+  title: WCAG 2.2 (Web Content Accessibility Guidelines)
+  type: standard
+  url: https://www.w3.org/TR/WCAG22/
+  owner: W3C
+  license: W3C Document License
+  status: STABLE
+  summary: |
+    W3C'nin web erişilebilirlik standardı, sürüm 2.2. Algılanabilirlik, kullanılabilirlik,
+    anlaşılabilirlik ve sağlamlık ilkeleri altında başarı kriterleri (A, AA, AAA).
+  why_useful: Erişilebilirlik denetimlerinin ölçülebilir standardı.
+  best_for: [Erişilebilirlik denetimi, yasal uyum (EN 301 549, kamu ihale şartları)]
+  not_for: [UI/UX estetik rehberi]
+  confidence: very-high
+  evidence_level: FACT
+  tags: [accessibility, standard, w3c, legal]
+  verified_at: 2026-09-20
+  expires_at: 2028-09-20
+  source_urls:
+    - https://www.w3.org/TR/WCAG22/
+
+- id: owasp-top10
+  title: OWASP Top 10 (2021)
+  type: standard
+  url: https://owasp.org/www-project-top-ten/
+  owner: OWASP Foundation
+  license: CC-BY-SA-4.0
+  status: ACTIVE
+  summary: |
+    Web uygulamaları için en kritik 10 güvenlik riski (Broken Access Control, Cryptographic Failures,
+    Injection, Insecure Design, Security Misconfiguration, Vulnerable/Outdated Components,
+    Identification and Authentication Failures, Software/Data Integrity Failures, Logging/Monitoring
+    Failures, SSRF).
+  why_useful: Security-audit skill'imizin kontrol listesi temeli.
+  confidence: very-high
+  evidence_level: FACT
+  tags: [security, web, owasp, checklist, standard]
+  verified_at: 2026-09-20
+  expires_at: 2027-09-20
+  source_urls:
+    - https://owasp.org/www-project-top-ten/
+
+- id: owasp-top10-llm
+  title: OWASP Top 10 for LLM Applications (2025)
+  type: standard
+  url: https://owasp.org/www-project-top-10-for-large-language-model-applications/
+  owner: OWASP Foundation
+  license: CC-BY-SA-4.0
+  status: ACTIVE
+  summary: |
+    LLM/ajan uygulamaları için en kritik 10 risk: Prompt Injection, Insecure Output Handling,
+    Training Data Poisoning, Model DoS, Supply Chain, Permission Issues, Data Leakage,
+    Excessive Agency, Overreliance, Model Theft.
+  why_useful: MCP ve ajan güvenliği denetimlerimiz için temel.
+  confidence: high
+  evidence_level: FACT
+  tags: [security, llm, agents, owasp, prompt-injection, mcp]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://owasp.org/www-project-top-10-for-large-language-model-applications/
+
+- id: nextjs-docs
+  title: Next.js Resmi Dokümantasyon
+  type: official-docs
+  url: https://nextjs.org/docs
+  owner: Vercel
+  license: proprietary
+  status: ACTIVE
+  summary: Next.js App Router, RSC, Server Actions, deployment, caching ve config rehberi.
+  why_useful: Next.js özellikleri hakkında kesin doğru kaynak.
+  confidence: very-high
+  evidence_level: FACT
+  tags: [nextjs, react, docs, reference, vercel]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://nextjs.org/docs
+
+- id: react-docs
+  title: React Resmi Dokümantasyon
+  type: official-docs
+  url: https://react.dev/
+  owner: Meta
+  license: CC-BY-4.0
+  status: ACTIVE
+  summary: Modern React dökümantasyonu (hooks, Server Components, escape hatches).
+  confidence: very-high
+  evidence_level: FACT
+  tags: [react, docs, reference]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://react.dev/
+
+- id: tailwind-docs
+  title: Tailwind CSS Dokümantasyonu
+  type: official-docs
+  url: https://tailwindcss.com/docs
+  owner: Tailwind Labs
+  license: MIT (kod), proprietary (içerik)
+  status: ACTIVE
+  summary: v4 odaklı Tailwind CSS rehberi; utility sınıfları, tema, CSS-first config.
+  confidence: very-high
+  evidence_level: FACT
+  tags: [css, tailwind, docs]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://tailwindcss.com/docs
+
+- id: supabase-docs
+  title: Supabase Dokümantasyonu
+  type: official-docs
+  url: https://supabase.com/docs
+  owner: Supabase
+  license: Apache-2.0 (kod), proprietary (içerik)
+  status: ACTIVE
+  summary: Auth, Database, RLS, Realtime, Storage, Edge Functions rehberi.
+  confidence: very-high
+  evidence_level: FACT
+  tags: [supabase, baas, docs]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://supabase.com/docs
+
+- id: playwright-docs
+  title: Playwright Dokümantasyonu
+  type: official-docs
+  url: https://playwright.dev/
+  owner: Microsoft
+  license: Creative Commons Attribution
+  status: ACTIVE
+  summary: E2E test, görsel karşılaştırma, trace viewer, API test, codegen rehberi.
+  confidence: very-high
+  evidence_level: FACT
+  tags: [playwright, testing, docs]
+  verified_at: 2026-09-20
+  expires_at: 2026-11-20
+  source_urls:
+    - https://playwright.dev/
+
+- id: mcp-official
+  title: Model Context Protocol (resmi site)
+  type: official-docs
+  url: https://modelcontextprotocol.io/
+  owner: Anthropic (ve MCP çalışma grubu)
+  license: CC-BY ve MIT (karışık)
+  status: ACTIVE
+  summary: MCP mimarisi, spec, SDK, güvenlik rehberi ve örnekler.
+  confidence: high
+  evidence_level: FACT
+  tags: [mcp, protocol, spec, agents]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://modelcontextprotocol.io/
+
+- id: vercel-docs
+  title: Vercel Dokümantasyonu
+  type: official-docs
+  url: https://vercel.com/docs
+  owner: Vercel
+  license: proprietary
+  status: ACTIVE
+  summary: Deployment, Edge/Serverless Functions, Analytics, Speed Insights, Cron, Preview.
+  confidence: high
+  evidence_level: FACT
+  tags: [hosting, vercel, deployment]
+  verified_at: 2026-09-20
+  expires_at: 2027-01-20
+  source_urls:
+    - https://vercel.com/docs
+
+- id: cloudflare-docs
+  title: Cloudflare Dokümantasyonu
+  type: official-docs
+  url: https://developers.cloudflare.com/
+  owner: Cloudflare
+  license: CC-BY-SA-4.0
+  status: ACTIVE
+  summary: Workers, Pages, R2, D1, CDN, DNS, WAF, Turnstile, Zero Trust dokümanları.
+  confidence: high
+  evidence_level: FACT
+  tags: [cloudflare, hosting, cdn, serverless, edge]
+  verified_at: 2026-09-20
+  expires_at: 2027-01-20
+  source_urls:
+    - https://developers.cloudflare.com/
+
+- id: turkiye-kvkk
+  title: KVKK (Kişisel Verileri Koruma Kanunu) — Resmi
+  type: official-docs
+  url: https://kvkk.gov.tr/
+  owner: T.C. Kişisel Verileri Koruma Kurumu
+  license: proprietary
+  status: STABLE
+  summary: |
+    Türkiye'deki kişisel veri mevzuatı, aydınlatma yükümlülüğü, açık rıza, VERBİS kaydı,
+    veri ihlali bildirimi ve yasal yükümlülükler.
+  why_useful: Türkiye'de çalışan her web sitesi/e-ticaret için uyulması gereken temel kanun.
+  confidence: very-high
+  evidence_level: FACT
+  tags: [legal, turkey, privacy, kvkk, gdpr]
+  verified_at: 2026-09-20
+  expires_at: 2028-09-20
+  source_urls:
+    - https://kvkk.gov.tr/
+    - https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6698&MevzuatTur=1&MevzuatTertip=5
+
+- id: efatura-gib
+  title: e-Fatura / e-Arşiv (GİB)
+  type: official-docs
+  url: https://ebelge.gib.gov.tr/
+  owner: T.C. Gelir İdaresi Başkanlığı
+  license: proprietary
+  status: ACTIVE
+  summary: e-Fatura, e-Arşiv, e-İrsaliye, e-SMM (Serbest Meslek Makbuzu) ve ilgili teknik kılavuzlar.
+  why_useful: Türkiye e-ticaretinde fatura kesimi için teknik entegrasyon (özel entegratör ya da GİB) gerekir.
+  confidence: high
+  evidence_level: FACT
+  tags: [legal, turkey, ecommerce, fatura, e-arsiv, vergi]
+  verified_at: 2026-09-20
+  expires_at: 2027-09-20
+  source_urls:
+    - https://ebelge.gib.gov.tr/

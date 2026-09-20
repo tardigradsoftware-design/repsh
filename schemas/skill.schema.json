@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/tardigradsoftware-design/repsh/schemas/skill.schema.json",
+  "title": "Skill Frontmatter Schema",
+  "type": "object",
+  "required": ["name", "version", "description", "category", "status", "confidence", "updated"],
+  "additionalProperties": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,60}[a-z0-9]$",
+      "description": "Klasör adıyla aynı; lowercase, kebab-case."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(-[a-z0-9.-]+)?$",
+      "description": "Semantic Versioning."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 200,
+      "description": "Tek cümle: bu skill ne zaman tetiklenmeli."
+    },
+    "category": {
+      "type": "string",
+      "enum": ["frontend", "backend", "database", "devops", "security", "testing", "seo", "performance", "accessibility", "ui-ux", "architecture", "agent-engineering", "workflow", "quality"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["experimental", "validated", "curated", "deprecated"]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["very-high", "high", "medium", "low", "unverified"]
+    },
+    "requires": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": [],
+      "description": "Bağımlı olunan diğer skill adları."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "updated": {
+      "type": "string",
+      "format": "date",
+      "description": "YYYY-MM-DD"
+    },
+    "verified_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "evidence_level": {
+      "type": "string",
+      "enum": ["FACT", "RECOMMENDATION", "EXPERIMENT", "OPINION", "HYPOTHESIS", "UNKNOWN"],
+      "default": "RECOMMENDATION"
+    }
+  }
+}

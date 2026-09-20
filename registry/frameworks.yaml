@@ -1,0 +1,194 @@
+# Başlıca framework'ler ve kütüphaneler (tekrar olmaması için repo zaten repositories.yaml'da
+# varsa özet bilgiyi buraya eklemiyoruz; bakınız orası).
+# Şema: schemas/repository-entry.schema.json
+
+- id: node-js
+  title: Node.js
+  type: framework
+  url: https://nodejs.org/
+  owner: OpenJS Foundation
+  license: MIT (değişik lisanslı parçalar var)
+  status: ACTIVE
+  summary: JavaScript çalışma ortamı. LTS sürümleri uzun vadeli destek alır.
+  why_useful: JS/TS tabanlı web geliştirmenin standart runtime'ı.
+  best_for: [Backend, build tooling, SSR, script'ler]
+  confidence: very-high
+  evidence_level: FACT
+  tags: [runtime, javascript, server]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://nodejs.org/
+
+- id: vite
+  title: Vite
+  type: framework
+  url: https://vite.dev/
+  owner: Vite topluluğu (Evan You önderliğinde)
+  repo: vitejs/vite
+  license: MIT
+  status: ACTIVE
+  summary: |
+    Modern frontend build tool. ES tabanlı hızlı dev server, production için Rollup bundle.
+    Next.js'in alt yapısında ve birçok modern starter'da kullanılıyor.
+  confidence: very-high
+  evidence_level: FACT
+  tags: [build-tool, bundler, dev-server, esm]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://vite.dev/
+
+- id: vitest
+  title: Vitest
+  type: framework
+  url: https://vitest.dev/
+  owner: Vitest topluluğu
+  license: MIT
+  status: ACTIVE
+  summary: Vite uyumlu birim test çerçevesi; Jest-compatible API, hızlı, ts/JSDOM/Happy DOM desteği.
+  why_useful: Birim ve entegrasyon testleri için Jest yerine modern alternatif.
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [testing, unit-test, vite]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://vitest.dev/
+
+- id: react-router
+  title: React Router
+  type: framework
+  url: https://reactrouter.com/
+  owner: Remix / Shopify
+  repo: remix-run/react-router
+  license: MIT
+  status: ACTIVE
+  summary: React için istemci ve sunucu tarafı router; Remix ve React Router Framework'ün temeli.
+  confidence: high
+  evidence_level: FACT
+  tags: [react, routing, spa]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://reactrouter.com/
+
+- id: zustand
+  title: Zustand
+  type: framework
+  url: https://github.com/pmndrs/zustand
+  owner: pmndrs
+  license: MIT
+  status: ACTIVE
+  stars: 58705
+  stars_checked_at: 2026-09-20
+  summary: Küçük, hooks tabanlı React state yönetimi. Redux'a göre çok daha hafif; orta-ölçekli state için yeterli.
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [react, state-management]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/pmndrs/zustand
+
+- id: chartjs
+  title: Chart.js
+  type: framework
+  url: https://github.com/chartjs/Chart.js
+  owner: chartjs
+  license: MIT
+  status: ACTIVE
+  stars: 67699
+  stars_checked_at: 2026-09-20
+  summary: Canvas tabanlı, basit-orta karmaşıklıkta grafikler için olgun kütüphane.
+  best_for: [Dashboard grafikleri, basit çizgi/çubuk/pasta grafikler]
+  not_for: [Çok büyük veri seti, yoğun etkileşimli görselleştirme (Recharts/Apache ECharts daha uygun)]
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [charts, visualization, canvas]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://github.com/chartjs/Chart.js
+
+- id: echarts
+  title: Apache ECharts
+  type: framework
+  url: https://github.com/apache/echarts
+  owner: apache
+  license: Apache-2.0
+  status: ACTIVE
+  stars: 67353
+  stars_checked_at: 2026-09-20
+  summary: Apache'nin zengin grafik/visualization kütüphanesi; Canvas+SVG, harita, karmaşık dashboard grafikleri.
+  best_for: [Karmaşık dashboard görselleştirmeleri, coğrafi harita, büyük veri]
+  not_for: [Hafif / minimal grafikler (bundle büyük)]
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [charts, visualization, dashboard, apache]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://github.com/apache/echarts
+
+- id: recharts
+  title: Recharts
+  type: framework
+  url: https://github.com/recharts/recharts
+  owner: recharts
+  license: MIT
+  status: ACTIVE
+  stars: 27573
+  stars_checked_at: 2026-09-20
+  summary: React için D3 tabanlı, declarative chart kütüphanesi.
+  confidence: medium
+  evidence_level: RECOMMENDATION
+  tags: [charts, react, visualization]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://github.com/recharts/recharts
+
+- id: stripe-node
+  title: Stripe Node.js SDK
+  type: framework
+  url: https://github.com/stripe/stripe-node
+  owner: stripe
+  license: MIT
+  status: ACTIVE
+  stars: 4509
+  stars_checked_at: 2026-09-20
+  summary: Stripe ödeme sisteminin resmi Node SDK'sı; subscriptions, webhooks, Checkout, Elements.
+  why_useful: Uluslararası ödeme kabulü için endüstri standardı.
+  best_for: [Uluslararası e-ticaret, SaaS abonelik, global ödeme]
+  not_for: [Sadece TR ödeme yöntemleri (iyzico/PayTR)]
+  confidence: very-high
+  evidence_level: RECOMMENDATION
+  tags: [payment, stripe, ecommerce, international]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/stripe/stripe-node
+    - https://stripe.com/docs
+
+- id: wordpress
+  title: WordPress
+  type: framework
+  url: https://github.com/WordPress/WordPress
+  owner: WordPress Foundation
+  license: GPL-2.0
+  status: ACTIVE
+  stars: 21427
+  stars_checked_at: 2026-09-20
+  summary: İçerik yönetim sistemi; eklenti/tema ekosistemi çok geniş.
+  best_for: [İçerik ağırlıklı siteler, blog, kurumsal site, WooCommerce ile mağaza]
+  not_for: [Modern SPA/dashboard deneyimi, özel SaaS uygulaması]
+  limitations: Güvenlik güncellemelerini sıkı takip etmek gerekir; özel kod yazarken mimari yaşını gösterir.
+  confidence: high
+  evidence_level: RECOMMENDATION
+  tags: [cms, php, blog, ecommerce, woocommerce]
+  verified_at: 2026-09-20
+  expires_at: 2026-12-20
+  source_urls:
+    - https://github.com/WordPress/WordPress
+    - https://wordpress.org/

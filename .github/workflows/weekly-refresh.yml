@@ -1,0 +1,36 @@
+name: Weekly metadata refresh and expired report
+
+on:
+  schedule:
+    - cron: '0 4 * * 1'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install js-yaml
+        run: npm install js-yaml --no-save --prefix /tmp
+
+      - name: List expired records
+        run: node scripts/update/refresh-metadata.js --dry-run --expired-only
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_PATH: /tmp/node_modules
+
+      - name: Check links (basit tarama)
+        run: timeout 120 node scripts/validate/check-links.js || true
+        env:
+          NODE_PATH: /tmp/node_modules
+
+      - name: Run validation
+        run: node scripts/validate/validate.js
+        env:
+          NODE_PATH: /tmp/node_modules

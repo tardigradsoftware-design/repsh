@@ -1,0 +1,21 @@
+version: 2
+updates:
+  # GitHub Actions sürümleri
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    labels: ["dependencies", "ci"]
+
+  # npm (scripts altındaki)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    labels: ["dependencies"]
+    ignore:
+      # js-yaml haricinde çok bağımlılık olmadığı için şimdilik boş; ileride buraya kilitli sürümler eklenebilir

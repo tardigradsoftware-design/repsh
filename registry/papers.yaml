@@ -1,0 +1,78 @@
+# Araştırma makaleleri (ikincil öncelik; web geliştirme ve ajan mühendisliği ile en ilgili olanlar).
+# Şema: schemas/repository-entry.schema.json
+
+- id: reAct
+  title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+  type: research-paper
+  url: https://arxiv.org/abs/2210.03629
+  owner: Yao et al. (Princeton, Google)
+  license: arXiv (metin erişimi)
+  status: STABLE
+  summary: |
+    Düşünce (reasoning trace) ile eylem (tool call) döngüsünü birleştiren klasik yaklaşım.
+    Araç kullanan ajanların temel mimari fikirlerinden birisi.
+  why_useful: Ajan iş akışlarımızda (research-before-code, browser-testing) neden "think → act → observe"
+    döngüsü kullandığımızın kuramsal temeli.
+  confidence: high
+  evidence_level: FACT
+  tags: [agents, reasoning, tool-use, paper]
+  verified_at: 2026-09-20
+  expires_at: 2027-09-20
+  source_urls:
+    - https://arxiv.org/abs/2210.03629
+
+- id: chain-of-thought
+  title: "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+  type: research-paper
+  url: https://arxiv.org/abs/2201.11903
+  owner: Wei et al. (Google)
+  license: arXiv
+  status: STABLE
+  summary: Adım adım akıl yürütme çıktısının birden fazla basamaklı görevlerde başarıyı artırdığını gösteren çalışma.
+  why_useful: Skill yazımında "gerekçe göstererek ilerle" yaklaşımının bilimsel temeli.
+  confidence: high
+  evidence_level: FACT
+  tags: [prompting, reasoning, paper]
+  verified_at: 2026-09-20
+  expires_at: 2027-09-20
+  source_urls:
+    - https://arxiv.org/abs/2201.11903
+
+- id: anthropic-agent-skills-engineering
+  title: "Equipping agents for the real world with Agent Skills"
+  type: blog
+  url: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
+  owner: Anthropic
+  license: proprietary (blog)
+  status: ACTIVE
+  summary: |
+    Agent Skills yaklaşımının tasarım gerekçeleri: tekrar kullanılabilir, sürümlenebilir,
+    doğrulanabilir talimat paketleri ile ajan performansı nasıl artar?
+  confidence: high
+  evidence_level: FACT
+  tags: [skills, agents, engineering, claude]
+  related: [anthropics-skills]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
+
+- id: swe-bench
+  title: "SWE-bench / SWE-bench Verified"
+  type: benchmark
+  url: https://www.swebench.com/
+  owner: Princeton NLP
+  license: MIT
+  status: ACTIVE
+  summary: |
+    Gerçek GitHub issue'larından üretilmiş, ajanların kod çözme yeteneğini ölçen benchmark.
+    Doğrulanmış (verified) sürümü yanlış referansları ayıklar.
+  why_useful: Kod yazma skill'lerimizin ajan üzerindeki etkisini ölçmek için en iyi benchmark'lerden.
+  confidence: high
+  evidence_level: FACT
+  tags: [benchmark, code-generation, agents, evaluation]
+  verified_at: 2026-09-20
+  expires_at: 2027-03-20
+  source_urls:
+    - https://www.swebench.com/
+    - https://arxiv.org/abs/2310.06770
